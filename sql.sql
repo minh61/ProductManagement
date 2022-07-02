@@ -1,1010 +1,1266 @@
-# CONVERT TO NATIVE QUERY
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jul 02, 2022 at 08:21 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
-INSERT INTO `category` (`id`, `name`, `code`, `status`, `description`) VALUES (1, 'May tinh', 'MT1', '5', 'aaaaaa')
-ON DUPLICATE KEY UPDATE name = 'May tinh' , code = 'MT1' , status = 5 , description = 'aaaaa';
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
 
-# Insert data
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
+--
+-- Database: `product_management`
+--
 
+-- --------------------------------------------------------
 
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (1,'đồng hồ nữ đen loser',553661,'6431057',0,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (2,'khăn hồng đôn chề',565451,'8484774',0,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (3,'tất xanh cá tính',557204,'5581312',1,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (4,'mũ cam loser',557160,'6405965',1,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (5,'quần đỏ đôn chề',69542,'7217657',1,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (6,'chăn đỏ loser',317462,'8394897',1,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (7,'gối tím cực ngầu',354583,'3601993',1,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (8,'đồng hồ thời trang hồng loser',230717,'2839688',1,'màu hồng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (9,'tất đỏ cá tính',130859,'9702092',1,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (10,'khăn hồng cánh sen loser',680449,'1501775',0,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (11,'tất đen thượng đẳng',122280,'1246343',0,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (12,'giày hồng đôn chề',433039,'1858115',1,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (13,'đồng hồ nam trắng cực ngầu',117117,'1326164',1,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (14,'giày đen thượng đẳng',729938,'2652030',0,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (15,'áo cam loser',930608,'6409900',1,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (16,'giày đen đôn chề',132733,'3402621',1,'màu vàng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (17,'đồng hồ nữ cam cá tính',677548,'8403546',1,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (18,'giày trắng loser',71721,'8393362',1,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (19,'quần đen cực ngầu',500831,'7573593',0,'màu xanh cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (20,'đồng hồ thời trang hồng cực ngầu',717039,'6205609',1,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (21,'chăn hồng đôn chề',954023,'1124292',0,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (22,'giày xanh thượng đẳng',644323,'7165978',1,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (23,'đồng hồ thời trang hồng cánh sen thượng đẳng',111145,'4146639',0,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (24,'mũ đỏ thượng đẳng',748271,'2777395',0,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (25,'khăn cam đôn chề',972129,'8598365',0,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (26,'mũ vàng đôn chề',571139,'2746978',1,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (27,'giày hồng cánh sen thượng đẳng',617025,'4483027',1,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (28,'áo cam cực ngầu',856000,'7119653',1,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (29,'áo xanh loser',807005,'2539452',0,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (30,'gối đen cực ngầu',814376,'9390266',0,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (31,'giày đỏ đôn chề',468253,'2754964',0,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (32,'khăn đỏ thượng đẳng',685260,'7564273',0,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (33,'quần hồng cánh sen cá tính',453251,'6797148',1,'màu vàng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (34,'gối trắng thượng đẳng',411391,'5272962',0,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (35,'tất tím cực ngầu',912439,'6726946',1,'màu hồng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (36,'đồng hồ thời trang trắng đôn chề',314224,'2955859',0,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (37,'quần đen cá tính',416993,'9233444',0,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (38,'giày xanh cá tính',316212,'2870696',0,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (39,'đồng hồ nam đen thượng đẳng',663504,'4569108',0,'màu vàng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (40,'tất tím đôn chề',668386,'5334061',0,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (41,'chăn hồng cánh sen thượng đẳng',922428,'4591073',1,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (42,'đồng hồ nữ đen đôn chề',526984,'1410776',0,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (43,'áo tím loser',977285,'9162807',1,'màu đen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (44,'gối trắng thượng đẳng',100158,'1936610',0,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (45,'đồng hồ nữ hồng cánh sen cá tính',216382,'7805594',1,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (46,'tất đỏ sành điệu',349648,'7045070',1,'màu đỏ cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (47,'mũ hồng loser',482682,'1042972',0,'màu đỏ cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (48,'áo tím thượng đẳng',794255,'9109582',1,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (49,'chăn hồng cánh sen cực ngầu',743070,'9807323',1,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (50,'đồng hồ nữ xanh cực ngầu',513413,'6614952',0,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (51,'chăn tím cực ngầu',658693,'1241861',0,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (52,'gối đen cực ngầu',860460,'6352240',0,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (53,'giày đen đôn chề',141123,'1621197',1,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (54,'gối đen loser',95740,'6971912',1,'màu cam cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (55,'áo đỏ cực ngầu',612923,'6049858',0,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (56,'quần hồng cánh sen đôn chề',566855,'1491956',1,'màu hồng cánh sen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (57,'chăn cam đôn chề',731090,'3013511',0,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (58,'chăn cam thời thượng',32294,'4783388',1,'màu đỏ cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (59,'đồng hồ thời trang đen cực ngầu',89047,'2585090',0,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (60,'chăn đỏ loser',420021,'7262528',1,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (61,'tất cam sành điệu',933474,'2942949',1,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (62,'quần trắng cực ngầu',71049,'1575240',0,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (63,'chăn đỏ đôn chề',403369,'1855442',0,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (64,'quần tím thời thượng',265749,'8029179',0,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (65,'khăn trắng đôn chề',20341,'7005274',1,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (66,'đồng hồ thời trang tím thời thượng',847671,'6236084',0,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (67,'đồng hồ nam xanh cực ngầu',509862,'2515440',1,'màu cam đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (68,'gối trắng loser',862701,'6040470',0,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (69,'đồng hồ thời trang vàng sành điệu',756823,'3707260',1,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (70,'gối đen sành điệu',839662,'6685538',1,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (71,'chăn tím loser',627551,'6660996',1,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (72,'quần cam sành điệu',787676,'6126350',0,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (73,'chăn trắng sành điệu',998152,'4059759',1,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (74,'chăn hồng thời thượng',286964,'6185208',1,'màu đỏ cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (75,'đồng hồ nam tím thượng đẳng',308014,'3845857',0,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (76,'áo tím loser',917008,'8483897',1,'màu hồng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (77,'chăn đen thượng đẳng',525622,'8201196',1,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (78,'tất hồng cánh sen thượng đẳng',337958,'1505782',0,'màu cam cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (79,'quần trắng cá tính',568733,'8964356',0,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (80,'chăn xanh sành điệu',212103,'8050940',1,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (81,'khăn hồng cánh sen cực ngầu',289192,'2097767',1,'màu vàng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (82,'giày hồng cá tính',145766,'3030531',1,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (83,'gối đen thời thượng',395031,'3715321',0,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (84,'đồng hồ nữ xanh cá tính',797836,'4305436',1,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (85,'áo vàng cực ngầu',206757,'3876788',0,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (86,'gối đen sành điệu',191934,'9343279',0,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (87,'quần trắng thời thượng',328812,'2352618',1,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (88,'giày vàng cá tính',27246,'9062491',0,'màu xanh cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (89,'gối xanh thượng đẳng',443890,'1689526',0,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (90,'khăn xanh cực ngầu',590115,'9693206',1,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (91,'đồng hồ nữ trắng đôn chề',322870,'4107812',1,'màu cam cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (92,'quần đen thượng đẳng',265296,'2003652',1,'màu cam đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (93,'quần cam sành điệu',94326,'5955686',0,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (94,'quần cam loser',500861,'1165751',0,'màu hồng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (95,'tất hồng cánh sen thời thượng',318529,'9243683',0,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (96,'mũ hồng cánh sen thời thượng',513862,'5613702',0,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (97,'đồng hồ thời trang hồng cánh sen cực ngầu',490435,'1049749',0,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (98,'tất vàng thượng đẳng',560198,'1991475',1,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (99,'đồng hồ nữ hồng cá tính',135765,'3391867',1,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (100,'chăn trắng sành điệu',353471,'6044697',0,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (101,'chăn đỏ sành điệu',468374,'8516857',0,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (102,'mũ đỏ đôn chề',603886,'5449105',0,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (103,'đồng hồ nữ hồng cánh sen cá tính',244954,'9696521',1,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (104,'khăn hồng cánh sen cá tính',717964,'3649223',1,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (105,'tất hồng cánh sen cá tính',615278,'8394329',0,'màu đen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (106,'đồng hồ nam hồng cánh sen cá tính',720401,'2421880',1,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (107,'giày đen thời thượng',972097,'6882256',0,'màu cam đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (108,'quần cam thời thượng',708778,'7004309',0,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (109,'tất đỏ thời thượng',361147,'4787123',0,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (110,'đồng hồ nữ tím đôn chề',766897,'3079415',0,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (111,'đồng hồ nữ cam sành điệu',486044,'2228934',1,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (112,'chăn hồng loser',869862,'8122801',0,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (113,'giày trắng thời thượng',185684,'7972487',0,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (114,'đồng hồ nữ đỏ thời thượng',173911,'2686508',1,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (115,'chăn đen thượng đẳng',736362,'2682145',1,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (116,'quần hồng cá tính',840731,'8900014',1,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (117,'đồng hồ nam hồng cá tính',803797,'1332093',1,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (118,'quần đỏ cực ngầu',218223,'9674774',1,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (119,'tất tím cá tính',497690,'4656033',0,'màu hồng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (120,'đồng hồ thời trang hồng thượng đẳng',862367,'4321075',0,'màu đỏ cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (121,'áo trắng cực ngầu',710801,'7361702',0,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (122,'giày vàng cá tính',152276,'2576053',0,'màu tím sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (123,'đồng hồ thời trang đỏ thượng đẳng',245287,'3916137',0,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (124,'đồng hồ thời trang tím cực ngầu',693112,'1986737',1,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (125,'gối đỏ loser',832759,'3941214',1,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (126,'chăn đen loser',961067,'8010182',1,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (127,'quần vàng thời thượng',605542,'2831589',1,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (128,'tất đen cá tính',944611,'8527978',0,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (129,'khăn vàng đôn chề',501145,'9875608',0,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (130,'giày trắng loser',633541,'6678479',0,'màu vàng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (131,'mũ cam sành điệu',810876,'8466426',1,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (132,'gối hồng cánh sen sành điệu',540017,'9396604',1,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (133,'quần hồng cánh sen sành điệu',621502,'3908283',1,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (134,'giày xanh cực ngầu',222609,'8653118',1,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (135,'gối hồng cánh sen cá tính',35936,'9579112',0,'màu cam cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (136,'mũ hồng loser',376458,'7704817',0,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (137,'đồng hồ thời trang hồng cánh sen loser',573125,'6874187',1,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (138,'đồng hồ thời trang vàng sành điệu',956001,'5011177',1,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (139,'giày đỏ sành điệu',787502,'7312329',0,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (140,'tất tím cá tính',374732,'2667100',0,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (141,'đồng hồ thời trang hồng cánh sen thời thượng',750091,'3689902',1,'màu xanh cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (142,'đồng hồ nữ tím cực ngầu',210749,'9750155',0,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (143,'đồng hồ nam đen loser',401024,'2362107',1,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (144,'gối trắng cực ngầu',734614,'5617444',1,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (145,'gối hồng cánh sen thời thượng',740582,'8070190',1,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (146,'mũ vàng cá tính',300183,'7055240',0,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (147,'đồng hồ nam cam cá tính',150860,'2803240',1,'màu vàng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (148,'quần hồng thời thượng',291432,'5084088',0,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (149,'đồng hồ thời trang trắng thời thượng',894304,'7926751',0,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (150,'đồng hồ nữ xanh cá tính',763504,'9947053',1,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (151,'đồng hồ nữ tím thượng đẳng',48067,'2811765',0,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (152,'quần tím thượng đẳng',864800,'4949126',1,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (153,'gối tím thượng đẳng',801564,'5595320',1,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (154,'khăn hồng loser',309827,'8515570',1,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (155,'tất đỏ cực ngầu',678528,'7284264',0,'màu đen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (156,'áo tím thượng đẳng',124402,'4183817',0,'màu đen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (157,'áo hồng cánh sen cá tính',801355,'4993177',1,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (158,'quần tím loser',903622,'1470258',1,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (159,'chăn cam cực ngầu',211166,'3980805',0,'màu vàng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (160,'đồng hồ nam trắng loser',869108,'9478930',0,'màu hồng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (161,'chăn đen cực ngầu',620990,'6993817',0,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (162,'mũ tím đôn chề',55598,'6316070',0,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (163,'đồng hồ nữ hồng đôn chề',132192,'8433038',0,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (164,'chăn vàng cực ngầu',51122,'4749240',0,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (165,'chăn vàng thượng đẳng',574063,'7474419',0,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (166,'đồng hồ nữ trắng đôn chề',655249,'8045615',0,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (167,'mũ xanh thời thượng',292309,'4332063',0,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (168,'khăn cam cá tính',85022,'2989841',0,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (169,'giày hồng cực ngầu',46650,'5803458',0,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (170,'giày xanh loser',628717,'4505379',1,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (171,'mũ cam sành điệu',38054,'7289513',0,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (172,'chăn tím sành điệu',840615,'2904630',1,'màu cam cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (173,'chăn đen thượng đẳng',297331,'1356824',1,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (174,'gối vàng loser',83721,'9841006',1,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (175,'quần cam loser',723752,'8857221',0,'màu hồng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (176,'đồng hồ nam đen sành điệu',615458,'4849107',1,'màu hồng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (177,'đồng hồ nam hồng cánh sen loser',903330,'1448278',1,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (178,'đồng hồ nam cam đôn chề',477418,'8483867',1,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (179,'chăn tím thời thượng',486674,'3635516',0,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (180,'đồng hồ nữ vàng đôn chề',417144,'9327120',1,'màu hồng cánh sen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (181,'khăn hồng cánh sen thượng đẳng',90863,'5628424',0,'màu cam đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (182,'giày cam loser',691654,'4304417',1,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (183,'giày đen thời thượng',523415,'6170197',1,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (184,'giày hồng thời thượng',40454,'6284501',0,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (185,'khăn xanh thượng đẳng',264194,'8746919',1,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (186,'gối vàng đôn chề',602442,'5315856',1,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (187,'đồng hồ nữ trắng cá tính',925893,'7117924',1,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (188,'đồng hồ thời trang tím loser',584331,'3978023',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (189,'giày cam cực ngầu',408918,'9207936',0,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (190,'quần hồng cực ngầu',877091,'8797701',1,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (191,'mũ vàng cá tính',99559,'2664899',0,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (192,'áo cam cá tính',44621,'2516660',0,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (193,'gối trắng cực ngầu',19546,'5894796',1,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (194,'đồng hồ nam vàng cá tính',210117,'4231670',0,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (195,'đồng hồ nữ hồng cánh sen cá tính',890585,'7009368',1,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (196,'chăn xanh đôn chề',344340,'8687334',0,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (197,'mũ trắng thượng đẳng',906797,'8653094',0,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (198,'gối trắng cá tính',696049,'4112364',1,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (199,'khăn trắng thượng đẳng',773798,'9697724',1,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (200,'quần xanh cực ngầu',297752,'3508058',0,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (201,'giày xanh loser',899128,'4633606',1,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (202,'gối xanh cực ngầu',944038,'7095136',0,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (203,'đồng hồ nam hồng thượng đẳng',326815,'2945613',0,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (204,'đồng hồ nữ hồng thượng đẳng',909790,'1004978',1,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (205,'giày đen cá tính',926403,'4003787',0,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (206,'gối tím sành điệu',844735,'6625003',1,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (207,'áo đỏ cực ngầu',607478,'4903509',1,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (208,'đồng hồ thời trang hồng cánh sen cực ngầu',30370,'3276549',0,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (209,'chăn đỏ loser',790783,'3780535',1,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (210,'giày đen thượng đẳng',529868,'3347432',0,'màu đen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (211,'áo xanh thượng đẳng',787638,'3058417',0,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (212,'đồng hồ nam hồng cá tính',220934,'1683900',0,'màu cam cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (213,'đồng hồ nữ hồng sành điệu',898443,'3775312',0,'màu đen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (214,'chăn đỏ sành điệu',23601,'2033816',1,'màu vàng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (215,'áo xanh cực ngầu',807530,'6345174',1,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (216,'quần cam thời thượng',725443,'8203551',0,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (217,'khăn hồng cánh sen cá tính',579987,'5854243',1,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (218,'đồng hồ thời trang trắng thượng đẳng',639726,'4612515',0,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (219,'đồng hồ nữ hồng cánh sen sành điệu',25859,'8205497',0,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (220,'đồng hồ nữ đỏ sành điệu',35918,'7948281',1,'màu cam cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (221,'gối xanh cực ngầu',378662,'8301426',1,'màu hồng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (222,'mũ hồng cánh sen sành điệu',274176,'7162194',1,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (223,'gối đỏ sành điệu',915832,'4738306',0,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (224,'đồng hồ thời trang vàng loser',917581,'1712706',0,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (225,'áo tím cá tính',300499,'4537582',1,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (226,'chăn đen thời thượng',359231,'7867084',1,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (227,'khăn hồng sành điệu',484126,'1559223',0,'màu cam cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (228,'gối hồng cực ngầu',560868,'9871608',1,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (229,'tất tím cực ngầu',392322,'3186628',1,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (230,'đồng hồ thời trang trắng cực ngầu',387371,'5656925',1,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (231,'chăn hồng cánh sen cá tính',798835,'3113510',0,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (232,'mũ trắng cá tính',672289,'6742997',1,'màu đen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (233,'khăn xanh thời thượng',820824,'4895522',1,'màu vàng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (234,'đồng hồ nam đỏ thời thượng',991840,'4058712',0,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (235,'giày xanh đôn chề',391458,'9998978',1,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (236,'khăn trắng loser',211687,'2985163',1,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (237,'quần đen thời thượng',130101,'2464242',0,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (238,'giày đen cá tính',101727,'9380268',0,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (239,'đồng hồ nam hồng cực ngầu',582862,'3967324',1,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (240,'đồng hồ thời trang đỏ sành điệu',110983,'1266573',0,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (241,'giày tím cực ngầu',674947,'8599690',1,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (242,'chăn trắng thời thượng',346284,'6223976',0,'màu vàng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (243,'khăn đen sành điệu',631733,'2757472',1,'màu vàng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (244,'áo xanh cá tính',621495,'9671250',0,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (245,'quần cam cá tính',699361,'1901626',0,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (246,'giày đỏ thời thượng',679962,'9096204',0,'màu đen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (247,'giày hồng thượng đẳng',677789,'8232009',1,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (248,'quần tím thời thượng',12717,'5936093',1,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (249,'tất trắng đôn chề',285721,'6099355',1,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (250,'tất tím sành điệu',473451,'6421402',0,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (251,'đồng hồ thời trang cam sành điệu',728422,'6939335',0,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (252,'tất trắng cực ngầu',625732,'9319362',1,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (253,'mũ đen cực ngầu',823986,'6357243',1,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (254,'tất tím thời thượng',656478,'4058878',1,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (255,'tất vàng đôn chề',968151,'7141701',1,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (256,'áo xanh cá tính',809017,'2407535',1,'màu hồng cánh sen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (257,'khăn trắng cá tính',229681,'9314885',1,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (258,'quần đen thượng đẳng',57262,'7760342',0,'màu cam cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (259,'quần trắng thời thượng',587916,'6723394',1,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (260,'đồng hồ nữ tím cá tính',873257,'8651462',0,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (261,'quần đỏ cực ngầu',663929,'6910284',0,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (262,'tất trắng loser',530940,'6059316',1,'màu vàng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (263,'chăn xanh loser',919175,'1594255',1,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (264,'tất trắng sành điệu',500663,'6819578',1,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (265,'đồng hồ nữ xanh cá tính',191874,'1534018',1,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (266,'quần trắng thượng đẳng',527156,'3697999',1,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (267,'tất cam loser',32965,'1800329',1,'màu cam đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (268,'đồng hồ nữ cam cực ngầu',534327,'4714669',1,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (269,'đồng hồ thời trang hồng thượng đẳng',956384,'4347703',0,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (270,'giày tím đôn chề',593797,'2941134',0,'màu vàng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (271,'quần tím loser',270234,'5860610',0,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (272,'chăn trắng cực ngầu',15021,'2121629',0,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (273,'giày hồng cá tính',677077,'3829093',0,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (274,'chăn xanh thời thượng',781347,'6964072',0,'màu đen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (275,'đồng hồ nữ xanh cực ngầu',147913,'7721815',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (276,'áo hồng cánh sen cực ngầu',988539,'3578526',1,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (277,'áo hồng cánh sen cực ngầu',801619,'6560101',0,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (278,'mũ vàng cá tính',959551,'8209516',1,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (279,'đồng hồ nữ trắng sành điệu',91291,'4003047',0,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (280,'tất tím thượng đẳng',529835,'9462759',0,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (281,'mũ đỏ cá tính',173621,'1243160',0,'màu đen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (282,'quần xanh sành điệu',812461,'8526451',1,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (283,'đồng hồ nam cam loser',449016,'5780350',1,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (284,'gối đen thời thượng',406634,'9408645',1,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (285,'gối vàng thời thượng',520220,'2829162',0,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (286,'mũ đỏ thời thượng',178115,'7185989',0,'màu đỏ cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (287,'quần hồng thời thượng',439703,'5023833',0,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (288,'áo đỏ thượng đẳng',462154,'1012782',1,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (289,'tất vàng cực ngầu',988973,'8632562',0,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (290,'khăn cam đôn chề',408827,'2462655',0,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (291,'tất xanh loser',266608,'4791175',0,'màu hồng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (292,'gối cam thời thượng',994592,'1084656',0,'màu xanh cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (293,'giày cam đôn chề',221102,'4972267',0,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (294,'đồng hồ nam tím thượng đẳng',569870,'9127915',1,'màu hồng cánh sen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (295,'đồng hồ nữ tím đôn chề',867555,'2826399',1,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (296,'gối xanh thượng đẳng',81834,'2615007',1,'màu vàng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (297,'tất hồng cánh sen cực ngầu',514868,'3819100',0,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (298,'đồng hồ nữ hồng cánh sen sành điệu',548427,'5519654',0,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (299,'gối tím cực ngầu',626561,'7954057',1,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (300,'khăn vàng thời thượng',562018,'3911829',0,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (301,'khăn trắng loser',56793,'7123659',1,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (302,'áo hồng loser',998162,'8171631',0,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (303,'chăn xanh đôn chề',218350,'5588499',0,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (304,'đồng hồ thời trang đỏ thượng đẳng',93842,'3072324',0,'màu tím sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (305,'giày vàng đôn chề',895435,'5430418',0,'màu vàng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (306,'tất đỏ sành điệu',591104,'3745460',1,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (307,'khăn đỏ loser',498949,'3580816',1,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (308,'áo hồng sành điệu',426063,'9518834',0,'màu cam đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (309,'giày tím thượng đẳng',844236,'6495698',1,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (310,'áo đỏ cá tính',275558,'7923826',0,'màu hồng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (311,'quần vàng loser',197374,'8303378',0,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (312,'chăn tím cực ngầu',56696,'8801077',1,'màu đen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (313,'giày cam cực ngầu',770976,'2203817',1,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (314,'chăn trắng cá tính',830720,'4171340',0,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (315,'khăn đỏ sành điệu',758992,'7575531',1,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (316,'gối hồng cánh sen sành điệu',42305,'9217522',1,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (317,'đồng hồ nữ vàng cá tính',169510,'6835772',1,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (318,'gối xanh thượng đẳng',813482,'6833525',0,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (319,'giày xanh loser',873447,'7264709',1,'màu hồng cánh sen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (320,'áo trắng cực ngầu',366088,'5812419',0,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (321,'quần trắng cá tính',590665,'2358395',0,'màu vàng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (322,'tất cam cá tính',972428,'6093271',1,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (323,'áo vàng cực ngầu',525569,'7969257',0,'màu xanh cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (324,'khăn trắng đôn chề',374105,'9903790',0,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (325,'quần cam loser',130026,'4003350',0,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (326,'đồng hồ nam cam cá tính',449147,'7050976',1,'màu hồng cánh sen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (327,'mũ xanh loser',223924,'2444155',1,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (328,'tất đỏ loser',895563,'2540564',0,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (329,'quần trắng loser',122554,'8798279',0,'màu vàng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (330,'quần trắng thời thượng',953858,'7014978',1,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (331,'mũ trắng cá tính',39268,'6038212',1,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (332,'áo xanh cực ngầu',192948,'3985589',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (333,'chăn hồng cánh sen loser',410192,'9750530',1,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (334,'tất xanh đôn chề',869488,'2573032',1,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (335,'đồng hồ nam đỏ thượng đẳng',492928,'1707952',1,'màu cam cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (336,'gối cam thượng đẳng',910570,'4057101',1,'màu cam đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (337,'tất đỏ sành điệu',269005,'7052403',0,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (338,'mũ đỏ cực ngầu',656380,'2361193',1,'màu tím sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (339,'mũ đỏ thượng đẳng',254354,'4755179',1,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (340,'đồng hồ nữ xanh thời thượng',138251,'4072220',0,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (341,'giày vàng loser',832939,'6815219',0,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (342,'gối cam đôn chề',214979,'6903218',1,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (343,'khăn vàng đôn chề',348156,'3544022',0,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (344,'tất đỏ thời thượng',878453,'5286194',1,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (345,'đồng hồ thời trang hồng cực ngầu',327792,'2511530',0,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (346,'mũ hồng loser',961098,'9462875',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (347,'mũ vàng thời thượng',879154,'9949498',0,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (348,'tất tím cá tính',729806,'9661820',1,'màu đen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (349,'quần cam sành điệu',240743,'2804315',1,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (350,'quần đỏ đôn chề',550845,'1169792',1,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (351,'đồng hồ nữ vàng thượng đẳng',564582,'7421621',0,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (352,'tất hồng cánh sen thượng đẳng',134516,'2601626',1,'màu tím sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (353,'chăn hồng cánh sen thời thượng',956099,'7017634',1,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (354,'chăn hồng cánh sen loser',466248,'9796143',1,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (355,'đồng hồ nữ trắng thượng đẳng',861734,'5408301',1,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (356,'mũ cam sành điệu',873694,'3787596',1,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (357,'mũ trắng sành điệu',316546,'2204199',0,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (358,'tất cam thời thượng',207288,'4023562',0,'màu tím sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (359,'đồng hồ thời trang đỏ thời thượng',283764,'6688812',0,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (360,'đồng hồ thời trang cam thời thượng',909064,'6320751',1,'màu cam cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (361,'khăn xanh thời thượng',203047,'4582410',1,'màu hồng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (362,'đồng hồ nữ hồng cánh sen loser',108383,'5836190',1,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (363,'tất đỏ loser',962915,'8205351',0,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (364,'khăn hồng thượng đẳng',133172,'2613104',1,'màu cam đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (365,'mũ tím thượng đẳng',899767,'4436819',1,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (366,'tất hồng cá tính',779170,'9054421',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (367,'đồng hồ thời trang đỏ thời thượng',96590,'4338070',1,'màu cam đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (368,'tất hồng cánh sen cá tính',543681,'5285847',1,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (369,'đồng hồ nam tím cá tính',223087,'4168051',0,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (370,'quần vàng cá tính',239334,'6331536',1,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (371,'áo xanh đôn chề',846269,'2864233',1,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (372,'đồng hồ nam tím đôn chề',711335,'7295378',0,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (373,'đồng hồ nam xanh sành điệu',881107,'1192446',0,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (374,'mũ cam cực ngầu',344533,'1515655',1,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (375,'áo đen thời thượng',92310,'1176155',0,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (376,'chăn hồng cực ngầu',249807,'1275215',0,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (377,'chăn xanh sành điệu',439759,'8106382',1,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (378,'chăn tím loser',641176,'4563099',0,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (379,'gối trắng cá tính',57394,'2202801',1,'màu vàng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (380,'áo xanh sành điệu',40849,'2835360',0,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (381,'mũ đen thời thượng',579820,'1107721',1,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (382,'áo tím cực ngầu',812714,'9418411',0,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (383,'đồng hồ thời trang đen cực ngầu',539337,'2836534',0,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (384,'đồng hồ nam hồng cá tính',44021,'7461467',0,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (385,'áo trắng thượng đẳng',195621,'7788031',1,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (386,'khăn đỏ sành điệu',964948,'9684604',1,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (387,'tất đen thượng đẳng',996924,'7854009',1,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (388,'quần đỏ đôn chề',328270,'5942092',1,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (389,'giày hồng sành điệu',520651,'2822869',1,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (390,'gối hồng cánh sen đôn chề',998303,'1972134',0,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (391,'khăn đỏ cá tính',511952,'2352587',1,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (392,'chăn đen sành điệu',344525,'4999392',1,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (393,'giày vàng thượng đẳng',96324,'8954403',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (394,'đồng hồ nữ hồng sành điệu',766634,'8475729',0,'màu đen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (395,'mũ vàng cực ngầu',807818,'7221024',0,'màu đen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (396,'tất đen sành điệu',113858,'8508456',1,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (397,'mũ xanh loser',892029,'3106171',1,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (398,'quần tím cực ngầu',444713,'7850885',1,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (399,'khăn hồng cánh sen loser',386186,'6197038',1,'màu cam cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (400,'quần hồng cánh sen cực ngầu',364488,'4656520',1,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (401,'đồng hồ thời trang đỏ cực ngầu',18399,'2816992',1,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (402,'quần hồng cánh sen loser',176726,'2275373',0,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (403,'mũ cam đôn chề',375824,'8764501',0,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (404,'đồng hồ nam vàng sành điệu',344002,'2062450',0,'màu xanh cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (405,'khăn trắng đôn chề',238312,'4858494',0,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (406,'đồng hồ nữ xanh thời thượng',78015,'8206592',0,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (407,'đồng hồ nam tím thời thượng',655285,'7011902',1,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (408,'quần trắng đôn chề',46826,'6447718',0,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (409,'gối hồng cánh sen đôn chề',69769,'3844952',1,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (410,'chăn cam thượng đẳng',294438,'7533315',0,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (411,'quần tím cá tính',740151,'6411236',0,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (412,'tất xanh sành điệu',554043,'2450891',0,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (413,'chăn đỏ đôn chề',661028,'3884752',1,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (414,'mũ đỏ sành điệu',279400,'4638875',0,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (415,'chăn cam thời thượng',650889,'7137393',1,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (416,'mũ xanh thượng đẳng',269544,'7543877',0,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (417,'chăn xanh cực ngầu',29719,'4961920',1,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (418,'mũ hồng sành điệu',138467,'2897822',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (419,'đồng hồ nữ trắng cực ngầu',885838,'2668803',0,'màu hồng cánh sen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (420,'đồng hồ nữ đỏ thượng đẳng',343345,'4476496',1,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (421,'quần cam đôn chề',264445,'7006668',1,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (422,'mũ đen thời thượng',634497,'4121257',1,'màu hồng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (423,'chăn trắng cá tính',759402,'7476703',0,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (424,'đồng hồ nam cam sành điệu',482322,'2617530',1,'màu hồng cánh sen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (425,'chăn trắng sành điệu',830329,'6869922',1,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (426,'giày cam thượng đẳng',795576,'1418002',0,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (427,'tất cam loser',540805,'9652712',0,'màu vàng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (428,'đồng hồ nam vàng đôn chề',480884,'1662476',1,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (429,'đồng hồ nữ trắng thời thượng',416903,'4890530',1,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (430,'quần hồng cánh sen thời thượng',311719,'5338801',1,'màu đen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (431,'quần tím thượng đẳng',158151,'5809791',1,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (432,'đồng hồ nữ hồng thượng đẳng',518864,'3738268',1,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (433,'tất vàng cá tính',178608,'3646639',1,'màu cam cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (434,'áo xanh thượng đẳng',995245,'1357361',1,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (435,'chăn vàng thời thượng',789188,'8761470',0,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (436,'quần vàng đôn chề',36211,'6527901',0,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (437,'giày hồng cánh sen cực ngầu',203765,'6935719',0,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (438,'tất hồng loser',282946,'4125658',1,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (439,'giày xanh thời thượng',958813,'8730015',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (440,'đồng hồ nam hồng sành điệu',947464,'3654022',1,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (441,'áo đen thời thượng',11098,'7345863',1,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (442,'gối hồng sành điệu',297873,'1625727',1,'màu đen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (443,'giày tím cá tính',38284,'9280533',0,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (444,'quần hồng cánh sen sành điệu',585118,'9996340',1,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (445,'quần xanh cá tính',584940,'1674118',0,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (446,'quần hồng sành điệu',721199,'3994535',1,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (447,'đồng hồ thời trang hồng cánh sen đôn chề',886234,'5833470',1,'màu vàng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (448,'gối tím sành điệu',160285,'9656674',1,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (449,'chăn hồng cánh sen cá tính',681633,'7323783',1,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (450,'giày cam sành điệu',509221,'9977539',0,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (451,'đồng hồ thời trang tím cá tính',81608,'4236801',1,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (452,'chăn tím thượng đẳng',181186,'3895959',0,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (453,'áo tím loser',66935,'5887833',0,'màu đen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (454,'đồng hồ thời trang đen loser',414641,'7532153',1,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (455,'đồng hồ nữ xanh sành điệu',141836,'4662130',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (456,'đồng hồ nữ hồng cánh sen cá tính',598393,'9827062',0,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (457,'đồng hồ nam xanh thời thượng',92247,'6230015',0,'màu hồng cánh sen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (458,'gối đen cực ngầu',677464,'8120065',0,'màu vàng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (459,'mũ đỏ loser',830870,'7911121',0,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (460,'đồng hồ nữ cam cá tính',562481,'2826369',1,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (461,'giày xanh cá tính',860544,'7772530',0,'màu vàng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (462,'quần tím thượng đẳng',990165,'6707644',0,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (463,'đồng hồ nữ hồng thượng đẳng',228449,'5832656',1,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (464,'đồng hồ nam hồng thượng đẳng',260202,'2228457',0,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (465,'gối hồng cực ngầu',494854,'5452154',1,'màu vàng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (466,'đồng hồ nữ đỏ loser',552959,'1107969',1,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (467,'đồng hồ nam đỏ sành điệu',991142,'8690016',0,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (468,'đồng hồ thời trang hồng cánh sen cực ngầu',860062,'4478090',1,'màu vàng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (469,'tất cam thời thượng',289042,'5355363',0,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (470,'đồng hồ nam cam sành điệu',613835,'6762542',0,'màu hồng cánh sen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (471,'đồng hồ nam tím đôn chề',637777,'6755391',1,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (472,'chăn đỏ loser',297752,'8939887',1,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (473,'giày vàng đôn chề',242724,'4270761',1,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (474,'chăn trắng sành điệu',935910,'9171728',1,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (475,'áo xanh cá tính',827518,'9492631',1,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (476,'áo đỏ loser',430949,'1044097',0,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (477,'chăn hồng cực ngầu',225373,'1175727',0,'màu đen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (478,'đồng hồ nam tím thời thượng',312544,'3671775',0,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (479,'giày vàng sành điệu',744172,'2609916',1,'màu hồng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (480,'tất vàng loser',521576,'2738136',1,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (481,'đồng hồ nữ hồng cánh sen cực ngầu',47520,'1420322',0,'màu cam cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (482,'gối cam thượng đẳng',969268,'7675232',0,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (483,'mũ trắng thời thượng',356090,'1411361',1,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (484,'đồng hồ nữ đỏ đôn chề',343404,'4505526',1,'màu đen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (485,'gối vàng thượng đẳng',445873,'8248934',0,'màu hồng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (486,'đồng hồ nam hồng cánh sen thượng đẳng',741270,'8774096',1,'màu tím sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (487,'tất đỏ thời thượng',838654,'5464653',0,'màu vàng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (488,'tất tím cá tính',714289,'3037627',1,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (489,'tất hồng đôn chề',602965,'3446388',0,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (490,'giày trắng cá tính',551678,'3873799',1,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (491,'khăn đen thời thượng',43390,'1655908',0,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (492,'quần xanh thời thượng',152692,'5775981',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (493,'chăn đỏ cá tính',270629,'7664704',0,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (494,'mũ hồng sành điệu',651586,'9210827',1,'màu cam cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (495,'đồng hồ thời trang hồng cánh sen thượng đẳng',842390,'5826267',1,'màu vàng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (496,'khăn vàng loser',612580,'8493956',0,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (497,'gối đỏ đôn chề',107069,'5217655',0,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (498,'gối cam thượng đẳng',290229,'7471701',0,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (499,'mũ hồng cá tính',655130,'8554192',1,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (500,'đồng hồ thời trang xanh thượng đẳng',317528,'8915383',0,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (501,'khăn hồng cực ngầu',961296,'9482951',1,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (510,'đồng hồ nam hồng đôn chề',333419,'8300089',0,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (511,'gối đỏ loser',144121,'8315366',1,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (512,'đồng hồ nam đen đôn chề',736890,'6362272',0,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (502,'đồng hồ nam hồng thượng đẳng',496767,'5411250',0,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (503,'đồng hồ nam trắng thời thượng',276028,'7668262',0,'màu vàng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (504,'tất hồng cá tính',59172,'2492795',0,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (505,'đồng hồ nam xanh sành điệu',822097,'5372228',0,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (506,'khăn tím đôn chề',445543,'2661743',1,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (507,'mũ xanh thượng đẳng',201986,'7730893',1,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (508,'giày hồng cực ngầu',217716,'6365833',1,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (509,'quần tím cực ngầu',286301,'6517289',0,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (513,'đồng hồ nam hồng cánh sen cá tính',374514,'3658310',0,'màu hồng cánh sen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (514,'áo hồng cánh sen cực ngầu',821417,'5296115',0,'màu đen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (515,'gối xanh đôn chề',295895,'8047052',1,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (516,'mũ đỏ thời thượng',480725,'7554604',0,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (517,'đồng hồ nam trắng sành điệu',815241,'8412952',0,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (518,'gối hồng cá tính',865284,'8448514',1,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (519,'gối hồng thời thượng',701284,'5313791',0,'màu vàng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (520,'khăn vàng sành điệu',933913,'6855576',1,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (521,'đồng hồ nam xanh thời thượng',359496,'5736515',0,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (522,'đồng hồ thời trang xanh sành điệu',95724,'7078916',0,'màu cam cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (523,'quần hồng cánh sen đôn chề',101041,'6691716',0,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (524,'tất hồng cánh sen loser',246839,'5162729',1,'màu hồng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (525,'mũ hồng cánh sen thời thượng',645920,'9659871',0,'màu hồng cánh sen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (526,'đồng hồ nữ xanh thời thượng',877995,'4920060',0,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (527,'đồng hồ nữ trắng cực ngầu',539727,'7500691',0,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (528,'khăn xanh cá tính',295822,'4006005',1,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (529,'đồng hồ nữ đen loser',153234,'3897318',1,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (530,'khăn cam thời thượng',339264,'3710109',1,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (531,'đồng hồ nữ đen cực ngầu',849142,'3762222',0,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (532,'quần xanh thượng đẳng',683227,'5615961',0,'màu đen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (533,'quần cam thượng đẳng',946203,'7907648',0,'màu hồng cánh sen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (534,'tất đỏ thời thượng',347065,'3681976',0,'màu vàng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (535,'giày xanh loser',22042,'7855364',0,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (536,'khăn trắng loser',488195,'6440923',1,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (537,'đồng hồ thời trang tím thời thượng',238699,'2285295',0,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (538,'áo tím thời thượng',534704,'3816037',0,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (539,'chăn cam loser',140546,'6711260',1,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (540,'khăn hồng cánh sen thời thượng',969235,'2340147',1,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (541,'quần vàng đôn chề',165055,'6124751',1,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (542,'đồng hồ nam đen loser',224695,'2993825',1,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (543,'áo xanh thượng đẳng',415609,'7869031',1,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (544,'giày xanh sành điệu',217232,'1896990',0,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (545,'khăn cam sành điệu',707082,'2303621',0,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (546,'đồng hồ nam hồng cánh sen thượng đẳng',871115,'6971312',1,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (547,'gối đen thượng đẳng',354241,'1838868',0,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (548,'áo đỏ thời thượng',760620,'7629065',1,'màu cam cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (549,'mũ xanh thời thượng',985647,'9133321',0,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (550,'gối xanh loser',765356,'2699263',1,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (551,'gối hồng cánh sen đôn chề',450764,'3589657',0,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (552,'tất cam đôn chề',862976,'7368455',0,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (553,'khăn đỏ đôn chề',338427,'4459793',1,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (554,'chăn xanh đôn chề',156697,'7501970',0,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (555,'mũ hồng loser',534557,'3059519',0,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (556,'tất trắng đôn chề',467397,'6582143',1,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (557,'chăn xanh cá tính',161638,'4789831',1,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (558,'đồng hồ nam đỏ loser',848466,'9840173',0,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (559,'khăn hồng cánh sen thượng đẳng',12169,'9533880',1,'màu hồng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (560,'đồng hồ nữ vàng cá tính',216853,'3318887',1,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (561,'đồng hồ nam cam sành điệu',120699,'1548881',0,'màu vàng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (562,'quần hồng cánh sen cực ngầu',515328,'1624106',0,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (563,'mũ xanh loser',736228,'1595244',1,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (564,'mũ xanh thượng đẳng',661513,'9049563',0,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (565,'áo vàng cá tính',189703,'6220395',0,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (566,'quần đỏ thời thượng',991941,'4803186',1,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (567,'áo xanh cá tính',813596,'3874014',0,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (568,'gối đen đôn chề',261233,'3087464',1,'màu vàng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (569,'tất hồng cánh sen cực ngầu',558714,'8528565',0,'màu xanh cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (570,'chăn đỏ thời thượng',889559,'5787668',1,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (571,'tất xanh cực ngầu',332805,'2755044',0,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (572,'giày trắng sành điệu',121857,'8395324',0,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (573,'gối tím thượng đẳng',479545,'1539326',1,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (574,'tất đen loser',872330,'1280669',0,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (575,'đồng hồ nam tím thượng đẳng',694453,'2766523',0,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (576,'gối đen cá tính',191883,'1450822',1,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (577,'gối tím cá tính',784810,'2265369',1,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (578,'giày vàng cực ngầu',404303,'8062816',0,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (579,'mũ xanh thời thượng',320730,'1279139',1,'màu vàng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (580,'đồng hồ nam vàng cá tính',554644,'9798963',0,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (581,'đồng hồ thời trang xanh loser',791094,'7685815',0,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (582,'áo xanh cực ngầu',492185,'8505642',1,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (583,'đồng hồ nữ vàng loser',21509,'6180515',0,'màu vàng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (584,'đồng hồ nữ hồng cực ngầu',772033,'4959984',0,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (585,'đồng hồ thời trang đen thượng đẳng',260197,'3776960',0,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (586,'đồng hồ nữ hồng cánh sen đôn chề',216660,'4837188',0,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (587,'khăn tím loser',195225,'2845477',1,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (588,'khăn đỏ cực ngầu',921820,'8225444',1,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (589,'đồng hồ nam cam đôn chề',414630,'2571391',0,'màu vàng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (590,'tất đen loser',446177,'6778757',1,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (591,'đồng hồ nữ hồng cánh sen cực ngầu',283657,'4363914',1,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (592,'đồng hồ nam vàng cá tính',22276,'1708164',0,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (593,'đồng hồ thời trang xanh đôn chề',29632,'7091938',0,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (594,'khăn đen cá tính',781046,'7786635',1,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (595,'đồng hồ nam cam thượng đẳng',169957,'1195646',0,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (596,'khăn tím đôn chề',830808,'2549894',0,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (597,'gối đỏ thời thượng',814222,'9551072',1,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (598,'áo xanh đôn chề',287760,'5749975',1,'màu cam cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (599,'khăn đỏ thượng đẳng',442948,'1715487',0,'màu hồng cánh sen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (600,'chăn đỏ cực ngầu',656456,'8737422',1,'màu cam cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (601,'khăn hồng cực ngầu',320115,'5225959',0,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (602,'quần xanh thời thượng',643367,'7310593',1,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (603,'quần hồng cánh sen đôn chề',553861,'9500705',0,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (604,'đồng hồ nam hồng loser',659932,'2278651',1,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (605,'đồng hồ nam trắng cá tính',857191,'3841876',1,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (606,'chăn cam thượng đẳng',524028,'4014668',1,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (607,'khăn tím sành điệu',370354,'5125942',0,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (608,'gối cam loser',335744,'4436549',1,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (609,'giày hồng cánh sen cá tính',384604,'2260160',0,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (610,'áo đỏ đôn chề',253318,'9977756',1,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (611,'mũ hồng đôn chề',884450,'8675428',0,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (612,'mũ xanh thượng đẳng',985766,'3730704',0,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (613,'tất trắng loser',257118,'7570739',0,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (614,'giày hồng cực ngầu',421052,'6587270',0,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (615,'đồng hồ thời trang tím thượng đẳng',379610,'8863717',1,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (616,'quần cam sành điệu',711654,'5521346',1,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (617,'tất cam loser',385722,'6795299',1,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (618,'mũ vàng loser',325291,'1576372',0,'màu vàng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (619,'đồng hồ nam xanh loser',894471,'6659291',0,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (620,'áo vàng thời thượng',392508,'3027243',1,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (621,'tất đen đôn chề',330670,'4743342',0,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (622,'chăn đỏ cực ngầu',221645,'1180256',1,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (623,'đồng hồ thời trang trắng thời thượng',117547,'6602795',1,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (624,'đồng hồ nam trắng cá tính',647281,'7001128',1,'màu đỏ cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (625,'tất vàng thời thượng',809992,'5208017',0,'màu cam cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (626,'áo đen thời thượng',630620,'9369911',0,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (627,'chăn hồng cánh sen cá tính',536678,'5311463',1,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (628,'đồng hồ thời trang đen loser',631882,'4952534',0,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (629,'tất trắng loser',64129,'9361372',0,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (630,'mũ hồng loser',855445,'3152641',0,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (631,'quần xanh loser',843429,'8536259',0,'màu tím sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (632,'đồng hồ nữ tím cực ngầu',114386,'6774085',1,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (633,'quần đen cực ngầu',178266,'1505851',1,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (634,'quần xanh thời thượng',23045,'4672322',1,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (635,'áo cam cá tính',597284,'4644367',1,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (636,'đồng hồ nam vàng cá tính',885529,'6958126',1,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (637,'đồng hồ nữ tím thời thượng',193540,'1462514',1,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (638,'quần đen sành điệu',805910,'1499294',0,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (639,'khăn hồng cánh sen loser',551026,'1668832',0,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (640,'đồng hồ nữ trắng thượng đẳng',509376,'7258431',0,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (641,'quần xanh cá tính',358548,'6588326',1,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (642,'đồng hồ nữ vàng thời thượng',721064,'1396144',0,'màu đen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (643,'chăn tím sành điệu',221214,'2874794',1,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (644,'đồng hồ nữ cam cá tính',673258,'4860001',0,'màu vàng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (645,'tất xanh đôn chề',91538,'1866310',1,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (646,'đồng hồ nam đen sành điệu',353625,'4734776',0,'màu hồng cánh sen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (647,'chăn hồng cánh sen đôn chề',505602,'9253821',0,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (648,'đồng hồ thời trang tím thời thượng',959082,'1773573',1,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (649,'áo hồng cánh sen loser',802892,'9865246',0,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (650,'khăn đen loser',805819,'1823459',0,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (651,'khăn hồng thời thượng',389783,'4345859',1,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (652,'đồng hồ thời trang hồng sành điệu',81418,'8137088',1,'màu hồng cánh sen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (653,'đồng hồ nam đỏ thời thượng',201141,'2059310',0,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (654,'gối hồng cực ngầu',434810,'7686321',0,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (655,'tất xanh loser',240126,'5891772',1,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (656,'tất đỏ loser',224785,'1823817',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (657,'đồng hồ nữ cam sành điệu',733577,'7389929',0,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (658,'giày trắng cá tính',333946,'1176489',0,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (659,'mũ trắng cá tính',645630,'5870233',0,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (660,'tất tím cá tính',509508,'2917577',0,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (661,'mũ hồng cánh sen cá tính',656908,'4498067',1,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (662,'mũ hồng cánh sen đôn chề',670771,'8179565',1,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (663,'đồng hồ thời trang hồng thời thượng',692746,'1172439',1,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (664,'đồng hồ thời trang hồng cánh sen loser',702018,'1570633',0,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (665,'áo vàng cực ngầu',267341,'7457803',0,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (666,'tất hồng thời thượng',258311,'5074542',0,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (667,'đồng hồ nữ hồng cánh sen cá tính',794970,'9346721',1,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (668,'mũ đen sành điệu',514751,'8094017',0,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (669,'chăn hồng cực ngầu',736076,'5383318',1,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (670,'chăn hồng cánh sen cực ngầu',529545,'6022840',0,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (671,'áo đỏ sành điệu',195974,'4899209',1,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (672,'đồng hồ nam tím loser',859254,'4363533',1,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (673,'tất xanh thượng đẳng',489861,'5746059',1,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (674,'giày trắng loser',790860,'6635141',0,'màu hồng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (675,'đồng hồ nam hồng sành điệu',602835,'6948711',1,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (676,'chăn cam loser',206566,'1335387',0,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (677,'khăn đỏ thượng đẳng',752309,'4382846',1,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (678,'quần tím thời thượng',396489,'8915285',1,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (679,'tất trắng thượng đẳng',413306,'4266232',1,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (680,'mũ đỏ cá tính',707607,'4242606',1,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (681,'giày hồng loser',854772,'1632361',1,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (682,'đồng hồ nữ hồng loser',759360,'6971141',0,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (683,'khăn đen loser',931763,'9552571',0,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (684,'đồng hồ nữ vàng sành điệu',245284,'2489015',0,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (685,'áo đen thời thượng',330726,'3889513',1,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (686,'tất hồng đôn chề',912313,'2880266',0,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (687,'đồng hồ nữ vàng loser',661294,'3685461',1,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (688,'đồng hồ nữ đỏ cá tính',622645,'1481489',0,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (689,'giày đỏ cực ngầu',29247,'9555382',0,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (690,'gối trắng loser',562723,'4697616',0,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (691,'đồng hồ thời trang trắng sành điệu',462713,'9317178',1,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (692,'đồng hồ thời trang trắng sành điệu',938314,'9847790',0,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (693,'đồng hồ thời trang cam đôn chề',779180,'3851627',0,'màu cam đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (694,'gối đen sành điệu',511767,'6304330',1,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (695,'đồng hồ nữ vàng cực ngầu',174412,'3243238',0,'màu vàng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (696,'áo hồng cánh sen đôn chề',806584,'5106276',1,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (697,'giày cam loser',59216,'5870316',1,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (698,'đồng hồ nam hồng cánh sen loser',453875,'5952169',0,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (699,'chăn trắng đôn chề',467640,'5973706',0,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (700,'tất vàng loser',424400,'8512894',0,'màu vàng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (701,'chăn cam thượng đẳng',542116,'2213886',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (702,'chăn xanh thượng đẳng',933906,'6823703',0,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (703,'đồng hồ thời trang hồng sành điệu',594520,'9297663',1,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (704,'khăn tím cá tính',277114,'4602078',0,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (705,'đồng hồ nữ cam thượng đẳng',981538,'1943749',0,'màu tím sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (706,'quần cam cực ngầu',749319,'7879049',1,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (707,'đồng hồ nam trắng cá tính',657766,'5571644',1,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (708,'đồng hồ thời trang xanh thời thượng',48635,'2531850',1,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (709,'tất đỏ cực ngầu',450010,'7573261',0,'màu đỏ cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (710,'mũ cam sành điệu',792772,'5908274',0,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (711,'đồng hồ nam đen thời thượng',474904,'4710590',1,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (712,'áo đỏ thời thượng',749428,'6608279',0,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (713,'đồng hồ nam trắng thượng đẳng',166691,'9710462',1,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (714,'mũ đen thượng đẳng',387252,'6418234',0,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (715,'gối hồng thời thượng',498494,'8103428',1,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (716,'đồng hồ thời trang cam đôn chề',912060,'1956719',1,'màu vàng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (717,'chăn hồng cánh sen sành điệu',301850,'5757310',1,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (718,'đồng hồ nam trắng sành điệu',660053,'2812906',1,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (719,'mũ hồng thời thượng',153162,'1895207',1,'màu hồng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (720,'áo đen thời thượng',997938,'4646605',1,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (721,'chăn vàng loser',833408,'8285656',0,'màu vàng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (722,'đồng hồ nam xanh cá tính',849309,'6103571',0,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (723,'áo trắng sành điệu',377814,'2914564',0,'màu đỏ cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (724,'tất vàng sành điệu',727578,'2920016',0,'màu hồng cánh sen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (725,'tất tím thượng đẳng',339360,'1037757',1,'màu đen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (726,'đồng hồ nữ trắng sành điệu',430721,'6149968',0,'màu tím sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (727,'đồng hồ thời trang đen cá tính',846848,'8037993',0,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (728,'tất hồng cánh sen loser',811850,'4194761',1,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (729,'giày tím loser',481861,'2999383',0,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (730,'gối hồng đôn chề',631399,'1469248',1,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (731,'đồng hồ nam đen sành điệu',369152,'4500992',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (732,'mũ đỏ thời thượng',711293,'2115469',1,'màu vàng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (733,'đồng hồ nam đỏ thời thượng',732808,'6382068',1,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (734,'gối trắng thời thượng',204387,'9043352',0,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (735,'khăn hồng cánh sen loser',323629,'7227206',1,'màu vàng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (736,'giày trắng thời thượng',380282,'9341765',1,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (737,'đồng hồ nam vàng thượng đẳng',664197,'4874414',0,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (738,'mũ tím đôn chề',785586,'6373269',0,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (739,'gối đỏ đôn chề',388882,'1475887',0,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (740,'gối cam thời thượng',684022,'8806460',0,'màu đen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (741,'khăn cam đôn chề',225546,'2210500',0,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (742,'áo đỏ đôn chề',719793,'2372546',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (743,'mũ đen cực ngầu',746576,'9003069',0,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (744,'đồng hồ nam trắng thượng đẳng',699460,'2396799',1,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (745,'áo đen thời thượng',551682,'3860236',1,'màu đỏ cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (746,'gối xanh thời thượng',278588,'6206176',1,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (747,'đồng hồ nữ trắng loser',662324,'3553394',0,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (748,'chăn cam thời thượng',884291,'8958088',0,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (749,'tất tím thượng đẳng',492456,'9104166',0,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (750,'khăn tím thượng đẳng',167935,'4253214',0,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (751,'đồng hồ thời trang xanh loser',941383,'6870591',1,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (752,'đồng hồ thời trang trắng loser',972505,'6117241',0,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (753,'giày đỏ thời thượng',442920,'4778801',0,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (754,'mũ hồng cánh sen sành điệu',566256,'7664971',0,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (755,'chăn hồng cánh sen sành điệu',477592,'8520302',1,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (756,'đồng hồ nam trắng cá tính',15287,'3010410',0,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (757,'khăn tím đôn chề',752878,'4514607',1,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (758,'chăn cam sành điệu',169463,'1039782',0,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (759,'áo đen sành điệu',388147,'8866833',1,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (760,'quần cam thượng đẳng',877012,'5884254',1,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (761,'đồng hồ nữ đen loser',930069,'9661356',0,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (762,'đồng hồ nữ tím đôn chề',612918,'2123210',0,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (763,'đồng hồ nữ đỏ thượng đẳng',298180,'9713765',1,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (764,'mũ tím đôn chề',101300,'7563643',0,'màu tím sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (765,'đồng hồ nam vàng loser',277263,'9319631',0,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (766,'mũ xanh sành điệu',179781,'9380278',0,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (767,'chăn cam đôn chề',769513,'9993783',0,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (768,'áo vàng đôn chề',148207,'4897436',0,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (769,'áo trắng sành điệu',42830,'3439848',1,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (770,'quần tím cực ngầu',428402,'9896550',1,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (771,'chăn đen cá tính',760654,'8093829',0,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (772,'giày tím thời thượng',36601,'2728246',1,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (773,'đồng hồ nam hồng cánh sen cá tính',636388,'7687856',0,'màu vàng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (774,'mũ đỏ sành điệu',212084,'9636276',0,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (775,'gối hồng cánh sen đôn chề',442132,'8372847',1,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (776,'mũ đỏ cá tính',988516,'9939232',0,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (777,'đồng hồ nữ trắng sành điệu',959536,'9316866',1,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (778,'gối đen đôn chề',415414,'3966672',0,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (779,'đồng hồ nữ hồng cánh sen cực ngầu',167504,'8972795',0,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (780,'quần tím thời thượng',222152,'3509248',1,'màu vàng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (781,'đồng hồ nam đen thượng đẳng',162747,'1735777',1,'màu hồng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (782,'đồng hồ nữ vàng thời thượng',499781,'8125138',0,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (783,'gối xanh cá tính',274914,'7513639',0,'màu cam đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (784,'tất tím đôn chề',396848,'6672894',0,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (785,'giày trắng thời thượng',580960,'9862959',1,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (786,'quần vàng thời thượng',311653,'5660265',1,'màu vàng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (787,'đồng hồ thời trang cam cá tính',913868,'3113267',0,'màu xanh cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (788,'gối đen thời thượng',943163,'7804118',0,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (789,'áo hồng đôn chề',280107,'2696706',0,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (790,'gối vàng sành điệu',336069,'1786569',1,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (791,'đồng hồ thời trang đỏ sành điệu',775820,'5883797',0,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (792,'chăn cam cực ngầu',818737,'1785116',1,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (793,'áo tím cực ngầu',779180,'2981538',0,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (794,'quần tím thời thượng',146437,'1927324',0,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (795,'quần hồng thượng đẳng',409287,'8719879',1,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (796,'tất hồng loser',583090,'2872651',0,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (797,'mũ vàng thượng đẳng',236021,'2352346',1,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (798,'chăn đỏ thượng đẳng',868752,'2745171',0,'màu đỏ cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (799,'mũ hồng cánh sen thượng đẳng',799148,'7000703',0,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (800,'đồng hồ nam đen cá tính',689259,'4308698',1,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (801,'tất hồng cánh sen sành điệu',144221,'7438539',1,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (802,'tất tím thượng đẳng',640264,'6557258',1,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (803,'mũ hồng cực ngầu',500360,'8696254',0,'màu hồng cánh sen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (804,'đồng hồ nữ xanh loser',694097,'1306960',0,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (805,'khăn đen sành điệu',160711,'9493865',0,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (806,'áo cam thời thượng',596862,'5796007',0,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (807,'đồng hồ thời trang hồng cánh sen cá tính',286521,'7738539',0,'màu cam cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (808,'đồng hồ nam đỏ thời thượng',570623,'2319728',0,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (809,'khăn xanh cá tính',568108,'3404901',1,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (810,'đồng hồ nữ vàng loser',262339,'1389132',1,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (811,'tất tím thời thượng',153921,'6231549',0,'màu vàng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (812,'gối đen loser',938897,'1148729',0,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (813,'quần cam thời thượng',325550,'9537158',1,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (814,'chăn trắng cực ngầu',648517,'2853629',1,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (815,'chăn xanh loser',625888,'1751301',1,'màu đỏ cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (816,'mũ cam cá tính',430593,'5516343',0,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (817,'đồng hồ nam trắng cực ngầu',627832,'1813776',1,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (818,'gối đen sành điệu',955773,'1976074',0,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (819,'tất đỏ cực ngầu',333580,'6380486',0,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (820,'khăn xanh thời thượng',254463,'2126904',1,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (821,'giày trắng cá tính',385028,'2152336',0,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (822,'áo đỏ cực ngầu',556147,'5660178',1,'màu đen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (823,'đồng hồ nữ xanh đôn chề',238630,'1140761',1,'màu cam đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (824,'đồng hồ thời trang tím cá tính',799706,'3115004',0,'màu vàng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (825,'đồng hồ nữ hồng cánh sen thượng đẳng',209312,'2825614',0,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (826,'gối vàng thượng đẳng',875562,'3168870',0,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (827,'đồng hồ nam hồng cánh sen đôn chề',541816,'7664174',0,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (828,'giày hồng thượng đẳng',385738,'4906628',0,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (829,'tất đen thượng đẳng',577516,'4908474',1,'màu hồng cánh sen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (830,'gối hồng cánh sen thời thượng',936715,'6026031',0,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (831,'áo đen thời thượng',86498,'8128774',0,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (832,'mũ đen đôn chề',583720,'5932742',0,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (833,'quần xanh cá tính',334003,'2891298',0,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (834,'gối cam đôn chề',44595,'1748453',1,'màu trắng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (835,'giày tím thời thượng',48224,'4095164',0,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (836,'quần đỏ cá tính',731101,'8382550',1,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (837,'mũ đỏ thượng đẳng',412485,'3010716',0,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (838,'áo trắng cực ngầu',845290,'3794588',1,'màu cam cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (839,'quần trắng sành điệu',938719,'4384840',0,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (840,'đồng hồ thời trang đỏ sành điệu',576713,'9369021',1,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (841,'khăn vàng thời thượng',874091,'7150538',0,'màu hồng cánh sen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (842,'đồng hồ thời trang hồng cực ngầu',404172,'2482875',0,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (843,'quần cam thời thượng',387273,'8084887',1,'màu đen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (844,'quần tím thời thượng',82015,'8685224',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (845,'quần hồng cá tính',63378,'7690361',0,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (846,'quần hồng cánh sen thượng đẳng',28140,'4087790',0,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (847,'tất vàng thượng đẳng',566650,'7950559',0,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (848,'đồng hồ nữ vàng loser',165986,'3004126',0,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (849,'giày trắng cá tính',672764,'8992393',1,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (850,'đồng hồ thời trang vàng loser',439413,'2336523',0,'màu hồng cánh sen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (851,'đồng hồ nữ hồng loser',166606,'9382809',1,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (852,'mũ cam cá tính',462902,'1111166',0,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (853,'giày tím cực ngầu',717253,'9274835',1,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (854,'giày tím đôn chề',849471,'2890416',1,'màu tím sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (855,'giày trắng cực ngầu',109640,'7797882',1,'màu xanh cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (856,'tất trắng loser',266965,'4278551',0,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (857,'đồng hồ nữ hồng cánh sen cá tính',58547,'5553168',1,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (858,'mũ trắng thời thượng',705707,'8313015',0,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (859,'khăn đỏ cá tính',530663,'4229912',1,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (860,'đồng hồ nữ xanh đôn chề',612646,'2526833',1,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (861,'áo trắng sành điệu',594507,'3711132',1,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (862,'khăn hồng cánh sen cá tính',29857,'9257360',0,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (863,'đồng hồ nữ đỏ đôn chề',448360,'7321805',0,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (864,'đồng hồ thời trang cam sành điệu',613264,'1394804',1,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (865,'đồng hồ nam tím cá tính',198562,'1105960',1,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (866,'đồng hồ nam xanh đôn chề',800632,'5125685',0,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (867,'quần xanh thượng đẳng',123142,'1829512',0,'màu vàng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (868,'đồng hồ nữ hồng sành điệu',164792,'4454694',1,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (869,'gối xanh thời thượng',276684,'1848558',0,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (870,'đồng hồ thời trang xanh thượng đẳng',387461,'7324270',1,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (871,'tất đen loser',322321,'9570918',1,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (872,'quần đen thời thượng',82305,'1645643',0,'màu hồng cánh sen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (873,'áo tím đôn chề',767386,'4484623',0,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (874,'đồng hồ nam vàng thượng đẳng',255236,'9602663',0,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (875,'chăn vàng loser',479200,'4382573',1,'màu vàng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (876,'đồng hồ thời trang tím thời thượng',778009,'3646097',1,'màu tím sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (877,'đồng hồ nam đen đôn chề',912512,'5819503',0,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (878,'đồng hồ nữ đỏ cá tính',283218,'1360616',0,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (879,'tất hồng cánh sen thượng đẳng',381746,'1923456',0,'màu cam đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (880,'tất vàng đôn chề',147201,'3537008',1,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (881,'mũ vàng cực ngầu',836205,'2634781',0,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (882,'gối tím sành điệu',480032,'7811561',0,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (883,'đồng hồ thời trang tím sành điệu',469157,'8802806',0,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (884,'gối tím đôn chề',979593,'6060946',1,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (885,'tất vàng thượng đẳng',502794,'3374462',0,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (886,'chăn tím cực ngầu',280481,'6654394',0,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (887,'áo cam thời thượng',136391,'2295820',0,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (888,'đồng hồ thời trang tím sành điệu',251152,'1717354',1,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (889,'đồng hồ thời trang trắng loser',311137,'5459876',1,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (890,'tất tím đôn chề',710599,'7650251',0,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (891,'chăn tím thượng đẳng',946705,'4618484',0,'màu cam cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (892,'tất hồng cánh sen sành điệu',499761,'8890383',0,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (893,'quần trắng cực ngầu',338696,'6108396',0,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (894,'tất xanh thời thượng',669250,'7645018',0,'màu đen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (895,'giày hồng sành điệu',194991,'3297678',1,'màu cam loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (896,'khăn hồng đôn chề',319872,'8534700',1,'màu cam cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (897,'đồng hồ nữ vàng loser',61938,'6799476',0,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (898,'quần tím sành điệu',447626,'2105761',0,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (899,'giày cam thượng đẳng',486532,'6351423',1,'màu hồng cánh sen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (900,'khăn trắng đôn chề',703154,'4584716',1,'màu đỏ thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (901,'khăn tím sành điệu',826959,'4767932',0,'màu xanh sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (902,'đồng hồ nam hồng sành điệu',432967,'7546846',0,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (903,'gối trắng sành điệu',227756,'7494208',1,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (904,'áo xanh cực ngầu',445009,'8050477',1,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (905,'đồng hồ thời trang tím cá tính',700080,'4084844',0,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (906,'chăn tím loser',564919,'1702256',1,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (907,'mũ vàng sành điệu',413528,'7768212',0,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (908,'giày cam sành điệu',87789,'9251773',0,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (909,'quần cam cá tính',617594,'9676076',1,'màu cam thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (910,'đồng hồ nữ trắng thời thượng',250901,'2782791',0,'màu xanh cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (911,'đồng hồ thời trang đỏ đôn chề',553521,'9064768',1,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (912,'chăn xanh sành điệu',514371,'4978860',0,'màu vàng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (913,'tất đỏ đôn chề',806569,'8445933',0,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (914,'giày hồng cực ngầu',910990,'1482087',0,'màu xanh cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (915,'đồng hồ thời trang hồng cực ngầu',926736,'9637689',0,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (916,'chăn hồng sành điệu',335166,'6042752',0,'màu hồng cánh sen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (917,'áo đen sành điệu',621107,'1096200',1,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (918,'chăn đỏ cực ngầu',661311,'5192738',1,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (919,'quần đen cực ngầu',488568,'8624137',1,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (920,'chăn cam cực ngầu',834320,'1789399',0,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (921,'giày xanh thời thượng',871692,'1655016',1,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (922,'chăn trắng cực ngầu',108648,'4319965',0,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (923,'áo xanh thời thượng',76789,'5558863',1,'màu xanh đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (924,'đồng hồ nam đỏ loser',549851,'2542150',0,'màu hồng cánh sen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (925,'giày hồng thời thượng',559486,'5811005',0,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (926,'tất đỏ đôn chề',333582,'4016288',1,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (927,'gối xanh cá tính',294054,'3241476',0,'màu trắng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (928,'tất hồng cánh sen đôn chề',564553,'8135343',0,'màu đỏ đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (929,'mũ vàng cá tính',249023,'5397093',0,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (930,'mũ đen thượng đẳng',221588,'3898117',0,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (931,'khăn hồng cánh sen đôn chề',690742,'5192350',1,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (932,'đồng hồ thời trang trắng thời thượng',435769,'2408275',0,'màu đen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (933,'chăn hồng cánh sen cực ngầu',21045,'6659315',0,'màu xanh cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (934,'tất cam thượng đẳng',171650,'2234825',0,'màu trắng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (935,'khăn vàng sành điệu',550842,'1193168',1,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (936,'khăn tím cực ngầu',648498,'8314233',1,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (937,'giày tím đôn chề',648010,'6415476',1,'màu đen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (938,'quần cam cá tính',459686,'6057363',1,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (939,'khăn hồng cánh sen thời thượng',653773,'6942429',1,'màu cam cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (940,'khăn hồng thượng đẳng',46325,'4082485',1,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (941,'đồng hồ thời trang vàng thời thượng',403815,'1263669',0,'màu hồng cánh sen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (942,'tất đỏ cực ngầu',15502,'4992626',0,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (943,'đồng hồ nữ đen cá tính',831486,'4617872',0,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (944,'áo đen sành điệu',847013,'4927330',1,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (945,'gối hồng cánh sen đôn chề',872303,'6781347',0,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (946,'áo vàng đôn chề',487483,'9869638',1,'màu xanh thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (947,'mũ đỏ cá tính',519250,'9891978',1,'màu cam sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (948,'mũ tím thượng đẳng',641491,'5774402',1,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (949,'chăn đen sành điệu',104405,'9468401',1,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (950,'khăn vàng thượng đẳng',416852,'2736174',0,'màu vàng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (951,'gối vàng loser',815351,'3904937',0,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (952,'quần hồng cánh sen cực ngầu',118927,'3635136',1,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (953,'đồng hồ nữ trắng sành điệu',774213,'2069100',1,'màu cam thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (954,'áo đen đôn chề',196417,'6078198',1,'màu hồng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (955,'khăn đỏ cực ngầu',219227,'4710234',1,'màu hồng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (956,'quần xanh cá tính',825662,'6410655',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (957,'giày trắng cực ngầu',898842,'9689292',0,'màu vàng loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (958,'gối đỏ sành điệu',479322,'2148531',0,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (959,'quần đen loser',759385,'9522269',1,'màu hồng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (960,'đồng hồ thời trang cam đôn chề',571677,'7208303',1,'màu tím cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (961,'chăn đen cá tính',828469,'2337067',0,'màu hồng cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (962,'khăn trắng thời thượng',811693,'7939044',1,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (963,'khăn hồng đôn chề',362416,'1738899',1,'màu đen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (964,'gối trắng sành điệu',668854,'7608033',0,'màu tím cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (965,'đồng hồ thời trang xanh sành điệu',969488,'2164120',0,'màu trắng đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (966,'khăn đen cực ngầu',710418,'9742780',0,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (967,'áo đen thời thượng',597206,'3262277',0,'màu tím đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (968,'giày đen loser',524282,'3329261',1,'màu tím thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (969,'đồng hồ nữ trắng loser',816203,'8291990',0,'màu trắng thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (970,'đồng hồ thời trang đỏ đôn chề',60940,'5726439',1,'màu trắng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (971,'áo tím sành điệu',549738,'4031449',0,'màu hồng cánh sen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (972,'mũ vàng cực ngầu',810530,'3454054',1,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (973,'đồng hồ thời trang đỏ thượng đẳng',160211,'7268302',1,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (974,'đồng hồ nữ hồng sành điệu',314250,'6078875',0,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (975,'mũ tím cực ngầu',193897,'2146481',0,'màu đen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (976,'đồng hồ nữ tím loser',588563,'4482049',0,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (977,'đồng hồ nam trắng sành điệu',73600,'1438948',1,'màu xanh thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (978,'gối hồng cá tính',440990,'8465307',0,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (979,'đồng hồ nam cam cực ngầu',127600,'1375915',0,'màu hồng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (980,'khăn hồng thời thượng',758899,'3553777',1,'màu đỏ sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (981,'đồng hồ nam hồng cánh sen thượng đẳng',264665,'3788714',1,'màu vàng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (982,'đồng hồ nam hồng cánh sen thượng đẳng',787324,'5980929',0,'màu vàng sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (983,'mũ cam thời thượng',504201,'7803447',1,'màu hồng cánh sen cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (984,'mũ đen thời thượng',121226,'7049550',1,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (985,'khăn hồng thượng đẳng',680511,'7152506',1,'màu hồng cánh sen thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (986,'đồng hồ nữ hồng cánh sen loser',952246,'6358395',1,'màu đen cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (987,'đồng hồ thời trang hồng cánh sen thượng đẳng',436114,'9842502',1,'màu xanh loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (988,'gối đỏ sành điệu',335756,'8541753',1,'màu đen sành điệu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (989,'áo hồng thượng đẳng',243893,'8609633',1,'màu tím thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (990,'chăn đỏ loser',956389,'8585232',1,'màu tím loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (991,'chăn hồng cá tính',156706,'1303002',1,'màu xanh cá tính',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (1000,'khăn đen loser',216664,'8664744',1,'màu đen đôn chề',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (992,'quần tím sành điệu',177179,'4908073',0,'màu đen loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (993,'quần cam thời thượng',975078,'7672446',0,'màu đỏ loser',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (994,'chăn cam loser',751489,'2859387',1,'màu hồng cánh sen thượng đẳng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (995,'đồng hồ nữ đỏ sành điệu',309698,'9274081',1,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (996,'mũ trắng đôn chề',686440,'3083510',0,'màu trắng cực ngầu',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (997,'quần trắng sành điệu',855129,'5450716',1,'màu đỏ thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (998,'áo tím cực ngầu',70636,'6375880',1,'màu hồng thời thượng',NULL);
-INSERT INTO `product` (`id`,`name`,`price`,`sku`,`status`,`description`,`category_id`) VALUES (999,'áo hồng loser',547377,'4766421',0,'màu vàng cá tính',NULL);
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+`id` int(11) NOT NULL,
+`name` varchar(50) NOT NULL,
+`code` varchar(50) NOT NULL,
+`status` int(11) NOT NULL,
+`description` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`id`, `name`, `code`, `status`, `description`) VALUES
+(1, 'May tinh', 'MT1', 5, 'aaaaa'),
+(2, 'Thời trang nữ', 'TTN2', 3, 'mô tả thời trang nữ'),
+(3, 'Đồ gia dụng', 'GD', 1, 'update mo ta gia dung'),
+(4, 'Điện thoại', 'ĐT1', 1, 'update mô tả điện thoại'),
+(5, 'Thiết bị điện tử', 'ĐT2', 1, 'mô tả tbđt'),
+(6, 'Laptop', 'LT1', 2, 'update mô tả laptop'),
+(7, 'Đồng hồ', 'ĐH1', 3, 'update mô tả đồng hồ'),
+(8, 'Đụng cụ thể thao', 'TT', 1, 'mo ta dụng cụ the thao'),
+(10, 'Giày nữ', 'GN2', 5, 'giày nữ'),
+(17, 'Giày nam', 'GN1', 5, 'giày nam');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `district`
+--
+
+CREATE TABLE `district` (
+`id` int(11) NOT NULL,
+`name` varchar(50) DEFAULT NULL,
+`code` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `district`
+--
+
+INSERT INTO `district` (`id`, `name`, `code`) VALUES
+(1, 'Nam Từ Liêm', 'NTL'),
+(2, 'Bắc Từ Liêm', 'BTL');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+`id` int(11) NOT NULL,
+`name` varchar(200) DEFAULT NULL,
+`price` float DEFAULT NULL,
+`sku` varchar(200) DEFAULT NULL,
+`status` int(11) DEFAULT NULL,
+`description` varchar(200) DEFAULT NULL,
+`category_id` int(11) DEFAULT NULL,
+`code` varchar(50) DEFAULT NULL,
+`created_at` datetime DEFAULT NULL,
+`modified_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `name`, `price`, `sku`, `status`, `description`, `category_id`, `code`, `created_at`, `modified_at`) VALUES
+(1, 'hhhh1022', 522.556, 'bbbb', 1, 'mo ta moi', 1, NULL, NULL, '2022-07-02 09:13:31'),
+(2, 'khăn hồng đôn chề', 565451, '8484774', 0, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(3, 'tất xanh cá tính', 557204, '5581312', 1, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(4, 'mũ cam loser', 557160, '6405965', 1, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(5, 'quần đỏ đôn chề', 69542, '7217657', 1, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(6, 'chăn đỏ loser', 317462, '8394897', 1, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(7, 'gối tím cực ngầu', 354583, '3601993', 1, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(8, 'đồng hồ thời trang hồng loser', 230717, '2839688', 1, 'màu hồng sành điệu', NULL, NULL, NULL, NULL),
+(9, 'tất đỏ cá tính', 130859, '9702092', 1, 'màu đen loser', NULL, NULL, NULL, NULL),
+(10, 'khăn hồng cánh sen loser', 680449, '1501775', 0, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(11, 'tất đen thượng đẳng', 122280, '1246343', 0, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(12, 'giày hồng đôn chề', 433039, '1858115', 1, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(13, 'đồng hồ nam trắng cực ngầu', 117117, '1326164', 1, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(14, 'giày đen thượng đẳng', 729938, '2652030', 0, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(15, 'áo cam loser', 930608, '6409900', 1, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(16, 'giày đen đôn chề', 132733, '3402621', 1, 'màu vàng thượng đẳng', NULL, NULL, NULL, NULL),
+(17, 'đồng hồ nữ cam cá tính', 677548, '8403546', 1, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(18, 'giày trắng loser', 71721, '8393362', 1, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(19, 'quần đen cực ngầu', 500831, '7573593', 0, 'màu xanh cực ngầu', NULL, NULL, NULL, NULL),
+(20, 'đồng hồ thời trang hồng cực ngầu', 717039, '6205609', 1, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(21, 'chăn hồng đôn chề', 954023, '1124292', 0, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(22, 'giày xanh thượng đẳng', 644323, '7165978', 1, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(23, 'đồng hồ thời trang hồng cánh sen thượng đẳng', 111145, '4146639', 0, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(24, 'mũ đỏ thượng đẳng', 748271, '2777395', 0, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(25, 'khăn cam đôn chề', 972129, '8598365', 0, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(26, 'mũ vàng đôn chề', 571139, '2746978', 1, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(27, 'giày hồng cánh sen thượng đẳng', 617025, '4483027', 1, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(28, 'áo cam cực ngầu', 856000, '7119653', 1, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(29, 'áo xanh loser', 807005, '2539452', 0, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(30, 'gối đen cực ngầu', 814376, '9390266', 0, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(31, 'giày đỏ đôn chề', 468253, '2754964', 0, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(32, 'khăn đỏ thượng đẳng', 685260, '7564273', 0, 'màu cam loser', NULL, NULL, NULL, NULL),
+(33, 'quần hồng cánh sen cá tính', 453251, '6797148', 1, 'màu vàng sành điệu', NULL, NULL, NULL, NULL),
+(34, 'gối trắng thượng đẳng', 411391, '5272962', 0, 'màu cam loser', NULL, NULL, NULL, NULL),
+(35, 'tất tím cực ngầu', 912439, '6726946', 1, 'màu hồng sành điệu', NULL, NULL, NULL, NULL),
+(36, 'đồng hồ thời trang trắng đôn chề', 314224, '2955859', 0, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(37, 'quần đen cá tính', 416993, '9233444', 0, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(38, 'giày xanh cá tính', 316212, '2870696', 0, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(39, 'đồng hồ nam đen thượng đẳng', 663504, '4569108', 0, 'màu vàng thượng đẳng', NULL, NULL, NULL, NULL),
+(40, 'tất tím đôn chề', 668386, '5334061', 0, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(41, 'chăn hồng cánh sen thượng đẳng', 922428, '4591073', 1, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(42, 'đồng hồ nữ đen đôn chề', 526984, '1410776', 0, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(43, 'áo tím loser', 977285, '9162807', 1, 'màu đen thời thượng', NULL, NULL, NULL, NULL),
+(44, 'gối trắng thượng đẳng', 100158, '1936610', 0, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(45, 'đồng hồ nữ hồng cánh sen cá tính', 216382, '7805594', 1, 'màu đen loser', NULL, NULL, NULL, NULL),
+(46, 'tất đỏ sành điệu', 349648, '7045070', 1, 'màu đỏ cực ngầu', NULL, NULL, NULL, NULL),
+(47, 'mũ hồng loser', 482682, '1042972', 0, 'màu đỏ cực ngầu', NULL, NULL, NULL, NULL),
+(48, 'áo tím thượng đẳng', 794255, '9109582', 1, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(49, 'chăn hồng cánh sen cực ngầu', 743070, '9807323', 1, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(50, 'đồng hồ nữ xanh cực ngầu', 513413, '6614952', 0, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(51, 'chăn tím cực ngầu', 658693, '1241861', 0, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(52, 'gối đen cực ngầu', 860460, '6352240', 0, 'màu đen loser', NULL, NULL, NULL, NULL),
+(53, 'giày đen đôn chề', 141123, '1621197', 1, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(54, 'gối đen loser', 95740, '6971912', 1, 'màu cam cá tính', NULL, NULL, NULL, NULL),
+(55, 'áo đỏ cực ngầu', 612923, '6049858', 0, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(56, 'quần hồng cánh sen đôn chề', 566855, '1491956', 1, 'màu hồng cánh sen loser', NULL, NULL, NULL, NULL),
+(57, 'chăn cam đôn chề', 731090, '3013511', 0, 'màu cam loser', NULL, NULL, NULL, NULL),
+(58, 'chăn cam thời thượng', 32294, '4783388', 1, 'màu đỏ cực ngầu', NULL, NULL, NULL, NULL),
+(59, 'đồng hồ thời trang đen cực ngầu', 89047, '2585090', 0, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(60, 'chăn đỏ loser', 420021, '7262528', 1, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(61, 'tất cam sành điệu', 933474, '2942949', 1, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(62, 'quần trắng cực ngầu', 71049, '1575240', 0, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(63, 'chăn đỏ đôn chề', 403369, '1855442', 0, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(64, 'quần tím thời thượng', 265749, '8029179', 0, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(65, 'khăn trắng đôn chề', 20341, '7005274', 1, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(66, 'đồng hồ thời trang tím thời thượng', 847671, '6236084', 0, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(67, 'đồng hồ nam xanh cực ngầu', 509862, '2515440', 1, 'màu cam đôn chề', NULL, NULL, NULL, NULL),
+(68, 'gối trắng loser', 862701, '6040470', 0, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(69, 'đồng hồ thời trang vàng sành điệu', 756823, '3707260', 1, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(70, 'gối đen sành điệu', 839662, '6685538', 1, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(71, 'chăn tím loser', 627551, '6660996', 1, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(72, 'quần cam sành điệu', 787676, '6126350', 0, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(73, 'chăn trắng sành điệu', 998152, '4059759', 1, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(74, 'chăn hồng thời thượng', 286964, '6185208', 1, 'màu đỏ cực ngầu', NULL, NULL, NULL, NULL),
+(75, 'đồng hồ nam tím thượng đẳng', 308014, '3845857', 0, 'màu đen loser', NULL, NULL, NULL, NULL),
+(76, 'áo tím loser', 917008, '8483897', 1, 'màu hồng sành điệu', NULL, NULL, NULL, NULL),
+(77, 'chăn đen thượng đẳng', 525622, '8201196', 1, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(78, 'tất hồng cánh sen thượng đẳng', 337958, '1505782', 0, 'màu cam cá tính', NULL, NULL, NULL, NULL),
+(79, 'quần trắng cá tính', 568733, '8964356', 0, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(80, 'chăn xanh sành điệu', 212103, '8050940', 1, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(81, 'khăn hồng cánh sen cực ngầu', 289192, '2097767', 1, 'màu vàng thượng đẳng', NULL, NULL, NULL, NULL),
+(82, 'giày hồng cá tính', 145766, '3030531', 1, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(83, 'gối đen thời thượng', 395031, '3715321', 0, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(84, 'đồng hồ nữ xanh cá tính', 797836, '4305436', 1, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(85, 'áo vàng cực ngầu', 206757, '3876788', 0, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(86, 'gối đen sành điệu', 191934, '9343279', 0, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(87, 'quần trắng thời thượng', 328812, '2352618', 1, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(88, 'giày vàng cá tính', 27246, '9062491', 0, 'màu xanh cực ngầu', NULL, NULL, NULL, NULL),
+(89, 'gối xanh thượng đẳng', 443890, '1689526', 0, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(90, 'khăn xanh cực ngầu', 590115, '9693206', 1, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(91, 'đồng hồ nữ trắng đôn chề', 322870, '4107812', 1, 'màu cam cực ngầu', NULL, NULL, NULL, NULL),
+(92, 'quần đen thượng đẳng', 265296, '2003652', 1, 'màu cam đôn chề', NULL, NULL, NULL, NULL),
+(93, 'quần cam sành điệu', 94326, '5955686', 0, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(94, 'quần cam loser', 500861, '1165751', 0, 'màu hồng sành điệu', NULL, NULL, NULL, NULL),
+(95, 'tất hồng cánh sen thời thượng', 318529, '9243683', 0, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(96, 'mũ hồng cánh sen thời thượng', 513862, '5613702', 0, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(97, 'đồng hồ thời trang hồng cánh sen cực ngầu', 490435, '1049749', 0, 'màu cam loser', NULL, NULL, NULL, NULL),
+(98, 'tất vàng thượng đẳng', 560198, '1991475', 1, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(99, 'đồng hồ nữ hồng cá tính', 135765, '3391867', 1, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(100, 'chăn trắng sành điệu', 353471, '6044697', 0, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(101, 'chăn đỏ sành điệu', 468374, '8516857', 0, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(102, 'mũ đỏ đôn chề', 603886, '5449105', 0, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(103, 'đồng hồ nữ hồng cánh sen cá tính', 244954, '9696521', 1, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(104, 'khăn hồng cánh sen cá tính', 717964, '3649223', 1, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(105, 'tất hồng cánh sen cá tính', 615278, '8394329', 0, 'màu đen cực ngầu', NULL, NULL, NULL, NULL),
+(106, 'đồng hồ nam hồng cánh sen cá tính', 720401, '2421880', 1, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(107, 'giày đen thời thượng', 972097, '6882256', 0, 'màu cam đôn chề', NULL, NULL, NULL, NULL),
+(108, 'quần cam thời thượng', 708778, '7004309', 0, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(109, 'tất đỏ thời thượng', 361147, '4787123', 0, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(110, 'đồng hồ nữ tím đôn chề', 766897, '3079415', 0, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(111, 'đồng hồ nữ cam sành điệu', 486044, '2228934', 1, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(112, 'chăn hồng loser', 869862, '8122801', 0, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(113, 'giày trắng thời thượng', 185684, '7972487', 0, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(114, 'đồng hồ nữ đỏ thời thượng', 173911, '2686508', 1, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(115, 'chăn đen thượng đẳng', 736362, '2682145', 1, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(116, 'quần hồng cá tính', 840731, '8900014', 1, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(117, 'đồng hồ nam hồng cá tính', 803797, '1332093', 1, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(118, 'quần đỏ cực ngầu', 218223, '9674774', 1, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(119, 'tất tím cá tính', 497690, '4656033', 0, 'màu hồng loser', NULL, NULL, NULL, NULL),
+(120, 'đồng hồ thời trang hồng thượng đẳng', 862367, '4321075', 0, 'màu đỏ cực ngầu', NULL, NULL, NULL, NULL),
+(121, 'áo trắng cực ngầu', 710801, '7361702', 0, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(122, 'giày vàng cá tính', 152276, '2576053', 0, 'màu tím sành điệu', NULL, NULL, NULL, NULL),
+(123, 'đồng hồ thời trang đỏ thượng đẳng', 245287, '3916137', 0, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(124, 'đồng hồ thời trang tím cực ngầu', 693112, '1986737', 1, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(125, 'gối đỏ loser', 832759, '3941214', 1, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(126, 'chăn đen loser', 961067, '8010182', 1, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(127, 'quần vàng thời thượng', 605542, '2831589', 1, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(128, 'tất đen cá tính', 944611, '8527978', 0, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(129, 'khăn vàng đôn chề', 501145, '9875608', 0, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(130, 'giày trắng loser', 633541, '6678479', 0, 'màu vàng đôn chề', NULL, NULL, NULL, NULL),
+(131, 'mũ cam sành điệu', 810876, '8466426', 1, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(132, 'gối hồng cánh sen sành điệu', 540017, '9396604', 1, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(133, 'quần hồng cánh sen sành điệu', 621502, '3908283', 1, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(134, 'giày xanh cực ngầu', 222609, '8653118', 1, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(135, 'gối hồng cánh sen cá tính', 35936, '9579112', 0, 'màu cam cá tính', NULL, NULL, NULL, NULL),
+(136, 'mũ hồng loser', 376458, '7704817', 0, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(137, 'đồng hồ thời trang hồng cánh sen loser', 573125, '6874187', 1, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(138, 'đồng hồ thời trang vàng sành điệu', 956001, '5011177', 1, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(139, 'giày đỏ sành điệu', 787502, '7312329', 0, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(140, 'tất tím cá tính', 374732, '2667100', 0, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(141, 'đồng hồ thời trang hồng cánh sen thời thượng', 750091, '3689902', 1, 'màu xanh cực ngầu', NULL, NULL, NULL, NULL),
+(142, 'đồng hồ nữ tím cực ngầu', 210749, '9750155', 0, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(143, 'đồng hồ nam đen loser', 401024, '2362107', 1, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(144, 'gối trắng cực ngầu', 734614, '5617444', 1, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(145, 'gối hồng cánh sen thời thượng', 740582, '8070190', 1, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(146, 'mũ vàng cá tính', 300183, '7055240', 0, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(147, 'đồng hồ nam cam cá tính', 150860, '2803240', 1, 'màu vàng sành điệu', NULL, NULL, NULL, NULL),
+(148, 'quần hồng thời thượng', 291432, '5084088', 0, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(149, 'đồng hồ thời trang trắng thời thượng', 894304, '7926751', 0, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(150, 'đồng hồ nữ xanh cá tính', 763504, '9947053', 1, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(151, 'đồng hồ nữ tím thượng đẳng', 48067, '2811765', 0, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(152, 'quần tím thượng đẳng', 864800, '4949126', 1, 'màu đen loser', NULL, NULL, NULL, NULL),
+(153, 'gối tím thượng đẳng', 801564, '5595320', 1, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(154, 'khăn hồng loser', 309827, '8515570', 1, 'màu đen loser', NULL, NULL, NULL, NULL),
+(155, 'tất đỏ cực ngầu', 678528, '7284264', 0, 'màu đen cực ngầu', NULL, NULL, NULL, NULL),
+(156, 'áo tím thượng đẳng', 124402, '4183817', 0, 'màu đen sành điệu', NULL, NULL, NULL, NULL),
+(157, 'áo hồng cánh sen cá tính', 801355, '4993177', 1, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(158, 'quần tím loser', 903622, '1470258', 1, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(159, 'chăn cam cực ngầu', 211166, '3980805', 0, 'màu vàng cực ngầu', NULL, NULL, NULL, NULL),
+(160, 'đồng hồ nam trắng loser', 869108, '9478930', 0, 'màu hồng loser', NULL, NULL, NULL, NULL),
+(161, 'chăn đen cực ngầu', 620990, '6993817', 0, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(162, 'mũ tím đôn chề', 55598, '6316070', 0, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(163, 'đồng hồ nữ hồng đôn chề', 132192, '8433038', 0, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(164, 'chăn vàng cực ngầu', 51122, '4749240', 0, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(165, 'chăn vàng thượng đẳng', 574063, '7474419', 0, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(166, 'đồng hồ nữ trắng đôn chề', 655249, '8045615', 0, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(167, 'mũ xanh thời thượng', 292309, '4332063', 0, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(168, 'khăn cam cá tính', 85022, '2989841', 0, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(169, 'giày hồng cực ngầu', 46650, '5803458', 0, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(170, 'giày xanh loser', 628717, '4505379', 1, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(171, 'mũ cam sành điệu', 38054, '7289513', 0, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(172, 'chăn tím sành điệu', 840615, '2904630', 1, 'màu cam cực ngầu', NULL, NULL, NULL, NULL),
+(173, 'chăn đen thượng đẳng', 297331, '1356824', 1, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(174, 'gối vàng loser', 83721, '9841006', 1, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(175, 'quần cam loser', 723752, '8857221', 0, 'màu hồng sành điệu', NULL, NULL, NULL, NULL),
+(176, 'đồng hồ nam đen sành điệu', 615458, '4849107', 1, 'màu hồng loser', NULL, NULL, NULL, NULL),
+(177, 'đồng hồ nam hồng cánh sen loser', 903330, '1448278', 1, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(178, 'đồng hồ nam cam đôn chề', 477418, '8483867', 1, 'màu đen loser', NULL, NULL, NULL, NULL),
+(179, 'chăn tím thời thượng', 486674, '3635516', 0, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(180, 'đồng hồ nữ vàng đôn chề', 417144, '9327120', 1, 'màu hồng cánh sen đôn chề', NULL, NULL, NULL, NULL),
+(181, 'khăn hồng cánh sen thượng đẳng', 90863, '5628424', 0, 'màu cam đôn chề', NULL, NULL, NULL, NULL),
+(182, 'giày cam loser', 691654, '4304417', 1, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(183, 'giày đen thời thượng', 523415, '6170197', 1, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(184, 'giày hồng thời thượng', 40454, '6284501', 0, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(185, 'khăn xanh thượng đẳng', 264194, '8746919', 1, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(186, 'gối vàng đôn chề', 602442, '5315856', 1, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(187, 'đồng hồ nữ trắng cá tính', 925893, '7117924', 1, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(188, 'đồng hồ thời trang tím loser', 584331, '3978023', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(189, 'giày cam cực ngầu', 408918, '9207936', 0, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(190, 'quần hồng cực ngầu', 877091, '8797701', 1, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(191, 'mũ vàng cá tính', 99559, '2664899', 0, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(192, 'áo cam cá tính', 44621, '2516660', 0, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(193, 'gối trắng cực ngầu', 19546, '5894796', 1, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(194, 'đồng hồ nam vàng cá tính', 210117, '4231670', 0, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(195, 'đồng hồ nữ hồng cánh sen cá tính', 890585, '7009368', 1, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(196, 'chăn xanh đôn chề', 344340, '8687334', 0, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(197, 'mũ trắng thượng đẳng', 906797, '8653094', 0, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(198, 'gối trắng cá tính', 696049, '4112364', 1, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(199, 'khăn trắng thượng đẳng', 773798, '9697724', 1, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(200, 'quần xanh cực ngầu', 297752, '3508058', 0, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(201, 'giày xanh loser', 899128, '4633606', 1, 'màu cam loser', NULL, NULL, NULL, NULL),
+(202, 'gối xanh cực ngầu', 944038, '7095136', 0, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(203, 'đồng hồ nam hồng thượng đẳng', 326815, '2945613', 0, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(204, 'đồng hồ nữ hồng thượng đẳng', 909790, '1004978', 1, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(205, 'giày đen cá tính', 926403, '4003787', 0, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(206, 'gối tím sành điệu', 844735, '6625003', 1, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(207, 'áo đỏ cực ngầu', 607478, '4903509', 1, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(208, 'đồng hồ thời trang hồng cánh sen cực ngầu', 30370, '3276549', 0, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(209, 'chăn đỏ loser', 790783, '3780535', 1, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(210, 'giày đen thượng đẳng', 529868, '3347432', 0, 'màu đen thời thượng', NULL, NULL, NULL, NULL),
+(211, 'áo xanh thượng đẳng', 787638, '3058417', 0, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(212, 'đồng hồ nam hồng cá tính', 220934, '1683900', 0, 'màu cam cá tính', NULL, NULL, NULL, NULL),
+(213, 'đồng hồ nữ hồng sành điệu', 898443, '3775312', 0, 'màu đen sành điệu', NULL, NULL, NULL, NULL),
+(214, 'chăn đỏ sành điệu', 23601, '2033816', 1, 'màu vàng sành điệu', NULL, NULL, NULL, NULL),
+(215, 'áo xanh cực ngầu', 807530, '6345174', 1, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(216, 'quần cam thời thượng', 725443, '8203551', 0, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(217, 'khăn hồng cánh sen cá tính', 579987, '5854243', 1, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(218, 'đồng hồ thời trang trắng thượng đẳng', 639726, '4612515', 0, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(219, 'đồng hồ nữ hồng cánh sen sành điệu', 25859, '8205497', 0, 'màu tím loser', NULL, NULL, NULL, NULL),
+(220, 'đồng hồ nữ đỏ sành điệu', 35918, '7948281', 1, 'màu cam cá tính', NULL, NULL, NULL, NULL),
+(221, 'gối xanh cực ngầu', 378662, '8301426', 1, 'màu hồng sành điệu', NULL, NULL, NULL, NULL),
+(222, 'mũ hồng cánh sen sành điệu', 274176, '7162194', 1, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(223, 'gối đỏ sành điệu', 915832, '4738306', 0, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(224, 'đồng hồ thời trang vàng loser', 917581, '1712706', 0, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(225, 'áo tím cá tính', 300499, '4537582', 1, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(226, 'chăn đen thời thượng', 359231, '7867084', 1, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(227, 'khăn hồng sành điệu', 484126, '1559223', 0, 'màu cam cực ngầu', NULL, NULL, NULL, NULL),
+(228, 'gối hồng cực ngầu', 560868, '9871608', 1, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(229, 'tất tím cực ngầu', 392322, '3186628', 1, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(230, 'đồng hồ thời trang trắng cực ngầu', 387371, '5656925', 1, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(231, 'chăn hồng cánh sen cá tính', 798835, '3113510', 0, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(232, 'mũ trắng cá tính', 672289, '6742997', 1, 'màu đen thời thượng', NULL, NULL, NULL, NULL),
+(233, 'khăn xanh thời thượng', 820824, '4895522', 1, 'màu vàng sành điệu', NULL, NULL, NULL, NULL),
+(234, 'đồng hồ nam đỏ thời thượng', 991840, '4058712', 0, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(235, 'giày xanh đôn chề', 391458, '9998978', 1, 'màu cam loser', NULL, NULL, NULL, NULL),
+(236, 'khăn trắng loser', 211687, '2985163', 1, 'màu đen loser', NULL, NULL, NULL, NULL),
+(237, 'quần đen thời thượng', 130101, '2464242', 0, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(238, 'giày đen cá tính', 101727, '9380268', 0, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(239, 'đồng hồ nam hồng cực ngầu', 582862, '3967324', 1, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(240, 'đồng hồ thời trang đỏ sành điệu', 110983, '1266573', 0, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(241, 'giày tím cực ngầu', 674947, '8599690', 1, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(242, 'chăn trắng thời thượng', 346284, '6223976', 0, 'màu vàng cực ngầu', NULL, NULL, NULL, NULL),
+(243, 'khăn đen sành điệu', 631733, '2757472', 1, 'màu vàng cực ngầu', NULL, NULL, NULL, NULL),
+(244, 'áo xanh cá tính', 621495, '9671250', 0, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(245, 'quần cam cá tính', 699361, '1901626', 0, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(246, 'giày đỏ thời thượng', 679962, '9096204', 0, 'màu đen sành điệu', NULL, NULL, NULL, NULL),
+(247, 'giày hồng thượng đẳng', 677789, '8232009', 1, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(248, 'quần tím thời thượng', 12717, '5936093', 1, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(249, 'tất trắng đôn chề', 285721, '6099355', 1, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(250, 'tất tím sành điệu', 473451, '6421402', 0, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(251, 'đồng hồ thời trang cam sành điệu', 728422, '6939335', 0, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(252, 'tất trắng cực ngầu', 625732, '9319362', 1, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(253, 'mũ đen cực ngầu', 823986, '6357243', 1, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(254, 'tất tím thời thượng', 656478, '4058878', 1, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(255, 'tất vàng đôn chề', 968151, '7141701', 1, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(256, 'áo xanh cá tính', 809017, '2407535', 1, 'màu hồng cánh sen đôn chề', NULL, NULL, NULL, NULL),
+(257, 'khăn trắng cá tính', 229681, '9314885', 1, 'màu tím loser', NULL, NULL, NULL, NULL),
+(258, 'quần đen thượng đẳng', 57262, '7760342', 0, 'màu cam cá tính', NULL, NULL, NULL, NULL),
+(259, 'quần trắng thời thượng', 587916, '6723394', 1, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(260, 'đồng hồ nữ tím cá tính', 873257, '8651462', 0, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(261, 'quần đỏ cực ngầu', 663929, '6910284', 0, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(262, 'tất trắng loser', 530940, '6059316', 1, 'màu vàng thượng đẳng', NULL, NULL, NULL, NULL),
+(263, 'chăn xanh loser', 919175, '1594255', 1, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(264, 'tất trắng sành điệu', 500663, '6819578', 1, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(265, 'đồng hồ nữ xanh cá tính', 191874, '1534018', 1, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(266, 'quần trắng thượng đẳng', 527156, '3697999', 1, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(267, 'tất cam loser', 32965, '1800329', 1, 'màu cam đôn chề', NULL, NULL, NULL, NULL),
+(268, 'đồng hồ nữ cam cực ngầu', 534327, '4714669', 1, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(269, 'đồng hồ thời trang hồng thượng đẳng', 956384, '4347703', 0, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(270, 'giày tím đôn chề', 593797, '2941134', 0, 'màu vàng đôn chề', NULL, NULL, NULL, NULL),
+(271, 'quần tím loser', 270234, '5860610', 0, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(272, 'chăn trắng cực ngầu', 15021, '2121629', 0, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(273, 'giày hồng cá tính', 677077, '3829093', 0, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(274, 'chăn xanh thời thượng', 781347, '6964072', 0, 'màu đen thời thượng', NULL, NULL, NULL, NULL),
+(275, 'đồng hồ nữ xanh cực ngầu', 147913, '7721815', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(276, 'áo hồng cánh sen cực ngầu', 988539, '3578526', 1, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(277, 'áo hồng cánh sen cực ngầu', 801619, '6560101', 0, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(278, 'mũ vàng cá tính', 959551, '8209516', 1, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(279, 'đồng hồ nữ trắng sành điệu', 91291, '4003047', 0, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(280, 'tất tím thượng đẳng', 529835, '9462759', 0, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(281, 'mũ đỏ cá tính', 173621, '1243160', 0, 'màu đen sành điệu', NULL, NULL, NULL, NULL),
+(282, 'quần xanh sành điệu', 812461, '8526451', 1, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(283, 'đồng hồ nam cam loser', 449016, '5780350', 1, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(284, 'gối đen thời thượng', 406634, '9408645', 1, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(285, 'gối vàng thời thượng', 520220, '2829162', 0, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(286, 'mũ đỏ thời thượng', 178115, '7185989', 0, 'màu đỏ cực ngầu', NULL, NULL, NULL, NULL),
+(287, 'quần hồng thời thượng', 439703, '5023833', 0, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(288, 'áo đỏ thượng đẳng', 462154, '1012782', 1, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(289, 'tất vàng cực ngầu', 988973, '8632562', 0, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(290, 'khăn cam đôn chề', 408827, '2462655', 0, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(291, 'tất xanh loser', 266608, '4791175', 0, 'màu hồng sành điệu', NULL, NULL, NULL, NULL),
+(292, 'gối cam thời thượng', 994592, '1084656', 0, 'màu xanh cực ngầu', NULL, NULL, NULL, NULL),
+(293, 'giày cam đôn chề', 221102, '4972267', 0, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(294, 'đồng hồ nam tím thượng đẳng', 569870, '9127915', 1, 'màu hồng cánh sen đôn chề', NULL, NULL, NULL, NULL),
+(295, 'đồng hồ nữ tím đôn chề', 867555, '2826399', 1, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(296, 'gối xanh thượng đẳng', 81834, '2615007', 1, 'màu vàng đôn chề', NULL, NULL, NULL, NULL),
+(297, 'tất hồng cánh sen cực ngầu', 514868, '3819100', 0, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(298, 'đồng hồ nữ hồng cánh sen sành điệu', 548427, '5519654', 0, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(299, 'gối tím cực ngầu', 626561, '7954057', 1, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(300, 'khăn vàng thời thượng', 562018, '3911829', 0, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(301, 'khăn trắng loser', 56793, '7123659', 1, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(302, 'áo hồng loser', 998162, '8171631', 0, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(303, 'chăn xanh đôn chề', 218350, '5588499', 0, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(304, 'đồng hồ thời trang đỏ thượng đẳng', 93842, '3072324', 0, 'màu tím sành điệu', NULL, NULL, NULL, NULL),
+(305, 'giày vàng đôn chề', 895435, '5430418', 0, 'màu vàng cực ngầu', NULL, NULL, NULL, NULL),
+(306, 'tất đỏ sành điệu', 591104, '3745460', 1, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(307, 'khăn đỏ loser', 498949, '3580816', 1, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(308, 'áo hồng sành điệu', 426063, '9518834', 0, 'màu cam đôn chề', NULL, NULL, NULL, NULL),
+(309, 'giày tím thượng đẳng', 844236, '6495698', 1, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(310, 'áo đỏ cá tính', 275558, '7923826', 0, 'màu hồng sành điệu', NULL, NULL, NULL, NULL),
+(311, 'quần vàng loser', 197374, '8303378', 0, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(312, 'chăn tím cực ngầu', 56696, '8801077', 1, 'màu đen cực ngầu', NULL, NULL, NULL, NULL),
+(313, 'giày cam cực ngầu', 770976, '2203817', 1, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(314, 'chăn trắng cá tính', 830720, '4171340', 0, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(315, 'khăn đỏ sành điệu', 758992, '7575531', 1, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(316, 'gối hồng cánh sen sành điệu', 42305, '9217522', 1, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(317, 'đồng hồ nữ vàng cá tính', 169510, '6835772', 1, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(318, 'gối xanh thượng đẳng', 813482, '6833525', 0, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(319, 'giày xanh loser', 873447, '7264709', 1, 'màu hồng cánh sen đôn chề', NULL, NULL, NULL, NULL),
+(320, 'áo trắng cực ngầu', 366088, '5812419', 0, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(321, 'quần trắng cá tính', 590665, '2358395', 0, 'màu vàng sành điệu', NULL, NULL, NULL, NULL),
+(322, 'tất cam cá tính', 972428, '6093271', 1, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(323, 'áo vàng cực ngầu', 525569, '7969257', 0, 'màu xanh cực ngầu', NULL, NULL, NULL, NULL),
+(324, 'khăn trắng đôn chề', 374105, '9903790', 0, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(325, 'quần cam loser', 130026, '4003350', 0, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(326, 'đồng hồ nam cam cá tính', 449147, '7050976', 1, 'màu hồng cánh sen loser', NULL, NULL, NULL, NULL),
+(327, 'mũ xanh loser', 223924, '2444155', 1, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(328, 'tất đỏ loser', 895563, '2540564', 0, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(329, 'quần trắng loser', 122554, '8798279', 0, 'màu vàng đôn chề', NULL, NULL, NULL, NULL),
+(330, 'quần trắng thời thượng', 953858, '7014978', 1, 'màu cam loser', NULL, NULL, NULL, NULL),
+(331, 'mũ trắng cá tính', 39268, '6038212', 1, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(332, 'áo xanh cực ngầu', 192948, '3985589', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(333, 'chăn hồng cánh sen loser', 410192, '9750530', 1, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(334, 'tất xanh đôn chề', 869488, '2573032', 1, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(335, 'đồng hồ nam đỏ thượng đẳng', 492928, '1707952', 1, 'màu cam cá tính', NULL, NULL, NULL, NULL),
+(336, 'gối cam thượng đẳng', 910570, '4057101', 1, 'màu cam đôn chề', NULL, NULL, NULL, NULL),
+(337, 'tất đỏ sành điệu', 269005, '7052403', 0, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(338, 'mũ đỏ cực ngầu', 656380, '2361193', 1, 'màu tím sành điệu', NULL, NULL, NULL, NULL),
+(339, 'mũ đỏ thượng đẳng', 254354, '4755179', 1, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(340, 'đồng hồ nữ xanh thời thượng', 138251, '4072220', 0, 'màu đen loser', NULL, NULL, NULL, NULL),
+(341, 'giày vàng loser', 832939, '6815219', 0, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(342, 'gối cam đôn chề', 214979, '6903218', 1, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(343, 'khăn vàng đôn chề', 348156, '3544022', 0, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(344, 'tất đỏ thời thượng', 878453, '5286194', 1, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(345, 'đồng hồ thời trang hồng cực ngầu', 327792, '2511530', 0, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(346, 'mũ hồng loser', 961098, '9462875', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(347, 'mũ vàng thời thượng', 879154, '9949498', 0, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(348, 'tất tím cá tính', 729806, '9661820', 1, 'màu đen cực ngầu', NULL, NULL, NULL, NULL),
+(349, 'quần cam sành điệu', 240743, '2804315', 1, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(350, 'quần đỏ đôn chề', 550845, '1169792', 1, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(351, 'đồng hồ nữ vàng thượng đẳng', 564582, '7421621', 0, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(352, 'tất hồng cánh sen thượng đẳng', 134516, '2601626', 1, 'màu tím sành điệu', NULL, NULL, NULL, NULL),
+(353, 'chăn hồng cánh sen thời thượng', 956099, '7017634', 1, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(354, 'chăn hồng cánh sen loser', 466248, '9796143', 1, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(355, 'đồng hồ nữ trắng thượng đẳng', 861734, '5408301', 1, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(356, 'mũ cam sành điệu', 873694, '3787596', 1, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(357, 'mũ trắng sành điệu', 316546, '2204199', 0, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(358, 'tất cam thời thượng', 207288, '4023562', 0, 'màu tím sành điệu', NULL, NULL, NULL, NULL),
+(359, 'đồng hồ thời trang đỏ thời thượng', 283764, '6688812', 0, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(360, 'đồng hồ thời trang cam thời thượng', 909064, '6320751', 1, 'màu cam cực ngầu', NULL, NULL, NULL, NULL),
+(361, 'khăn xanh thời thượng', 203047, '4582410', 1, 'màu hồng sành điệu', NULL, NULL, NULL, NULL),
+(362, 'đồng hồ nữ hồng cánh sen loser', 108383, '5836190', 1, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(363, 'tất đỏ loser', 962915, '8205351', 0, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(364, 'khăn hồng thượng đẳng', 133172, '2613104', 1, 'màu cam đôn chề', NULL, NULL, NULL, NULL),
+(365, 'mũ tím thượng đẳng', 899767, '4436819', 1, 'màu tím loser', NULL, NULL, NULL, NULL),
+(366, 'tất hồng cá tính', 779170, '9054421', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(367, 'đồng hồ thời trang đỏ thời thượng', 96590, '4338070', 1, 'màu cam đôn chề', NULL, NULL, NULL, NULL),
+(368, 'tất hồng cánh sen cá tính', 543681, '5285847', 1, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(369, 'đồng hồ nam tím cá tính', 223087, '4168051', 0, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(370, 'quần vàng cá tính', 239334, '6331536', 1, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(371, 'áo xanh đôn chề', 846269, '2864233', 1, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(372, 'đồng hồ nam tím đôn chề', 711335, '7295378', 0, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(373, 'đồng hồ nam xanh sành điệu', 881107, '1192446', 0, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(374, 'mũ cam cực ngầu', 344533, '1515655', 1, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(375, 'áo đen thời thượng', 92310, '1176155', 0, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(376, 'chăn hồng cực ngầu', 249807, '1275215', 0, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(377, 'chăn xanh sành điệu', 439759, '8106382', 1, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(378, 'chăn tím loser', 641176, '4563099', 0, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(379, 'gối trắng cá tính', 57394, '2202801', 1, 'màu vàng cực ngầu', NULL, NULL, NULL, NULL),
+(380, 'áo xanh sành điệu', 40849, '2835360', 0, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(381, 'mũ đen thời thượng', 579820, '1107721', 1, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(382, 'áo tím cực ngầu', 812714, '9418411', 0, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(383, 'đồng hồ thời trang đen cực ngầu', 539337, '2836534', 0, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(384, 'đồng hồ nam hồng cá tính', 44021, '7461467', 0, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(385, 'áo trắng thượng đẳng', 195621, '7788031', 1, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(386, 'khăn đỏ sành điệu', 964948, '9684604', 1, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(387, 'tất đen thượng đẳng', 996924, '7854009', 1, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(388, 'quần đỏ đôn chề', 328270, '5942092', 1, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(389, 'giày hồng sành điệu', 520651, '2822869', 1, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(390, 'gối hồng cánh sen đôn chề', 998303, '1972134', 0, 'màu tím loser', NULL, NULL, NULL, NULL),
+(391, 'khăn đỏ cá tính', 511952, '2352587', 1, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(392, 'chăn đen sành điệu', 344525, '4999392', 1, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(393, 'giày vàng thượng đẳng', 96324, '8954403', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(394, 'đồng hồ nữ hồng sành điệu', 766634, '8475729', 0, 'màu đen cực ngầu', NULL, NULL, NULL, NULL),
+(395, 'mũ vàng cực ngầu', 807818, '7221024', 0, 'màu đen sành điệu', NULL, NULL, NULL, NULL),
+(396, 'tất đen sành điệu', 113858, '8508456', 1, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(397, 'mũ xanh loser', 892029, '3106171', 1, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(398, 'quần tím cực ngầu', 444713, '7850885', 1, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(399, 'khăn hồng cánh sen loser', 386186, '6197038', 1, 'màu cam cá tính', NULL, NULL, NULL, NULL),
+(400, 'quần hồng cánh sen cực ngầu', 364488, '4656520', 1, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(401, 'đồng hồ thời trang đỏ cực ngầu', 18399, '2816992', 1, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(402, 'quần hồng cánh sen loser', 176726, '2275373', 0, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(403, 'mũ cam đôn chề', 375824, '8764501', 0, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(404, 'đồng hồ nam vàng sành điệu', 344002, '2062450', 0, 'màu xanh cực ngầu', NULL, NULL, NULL, NULL),
+(405, 'khăn trắng đôn chề', 238312, '4858494', 0, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(406, 'đồng hồ nữ xanh thời thượng', 78015, '8206592', 0, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(407, 'đồng hồ nam tím thời thượng', 655285, '7011902', 1, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(408, 'quần trắng đôn chề', 46826, '6447718', 0, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(409, 'gối hồng cánh sen đôn chề', 69769, '3844952', 1, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(410, 'chăn cam thượng đẳng', 294438, '7533315', 0, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(411, 'quần tím cá tính', 740151, '6411236', 0, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(412, 'tất xanh sành điệu', 554043, '2450891', 0, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(413, 'chăn đỏ đôn chề', 661028, '3884752', 1, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(414, 'mũ đỏ sành điệu', 279400, '4638875', 0, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(415, 'chăn cam thời thượng', 650889, '7137393', 1, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(416, 'mũ xanh thượng đẳng', 269544, '7543877', 0, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(417, 'chăn xanh cực ngầu', 29719, '4961920', 1, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(418, 'mũ hồng sành điệu', 138467, '2897822', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(419, 'đồng hồ nữ trắng cực ngầu', 885838, '2668803', 0, 'màu hồng cánh sen loser', NULL, NULL, NULL, NULL),
+(420, 'đồng hồ nữ đỏ thượng đẳng', 343345, '4476496', 1, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(421, 'quần cam đôn chề', 264445, '7006668', 1, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(422, 'mũ đen thời thượng', 634497, '4121257', 1, 'màu hồng loser', NULL, NULL, NULL, NULL),
+(423, 'chăn trắng cá tính', 759402, '7476703', 0, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(424, 'đồng hồ nam cam sành điệu', 482322, '2617530', 1, 'màu hồng cánh sen loser', NULL, NULL, NULL, NULL),
+(425, 'chăn trắng sành điệu', 830329, '6869922', 1, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(426, 'giày cam thượng đẳng', 795576, '1418002', 0, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(427, 'tất cam loser', 540805, '9652712', 0, 'màu vàng đôn chề', NULL, NULL, NULL, NULL),
+(428, 'đồng hồ nam vàng đôn chề', 480884, '1662476', 1, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(429, 'đồng hồ nữ trắng thời thượng', 416903, '4890530', 1, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(430, 'quần hồng cánh sen thời thượng', 311719, '5338801', 1, 'màu đen thời thượng', NULL, NULL, NULL, NULL),
+(431, 'quần tím thượng đẳng', 158151, '5809791', 1, 'màu tím loser', NULL, NULL, NULL, NULL),
+(432, 'đồng hồ nữ hồng thượng đẳng', 518864, '3738268', 1, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(433, 'tất vàng cá tính', 178608, '3646639', 1, 'màu cam cực ngầu', NULL, NULL, NULL, NULL),
+(434, 'áo xanh thượng đẳng', 995245, '1357361', 1, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(435, 'chăn vàng thời thượng', 789188, '8761470', 0, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(436, 'quần vàng đôn chề', 36211, '6527901', 0, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(437, 'giày hồng cánh sen cực ngầu', 203765, '6935719', 0, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(438, 'tất hồng loser', 282946, '4125658', 1, 'màu cam loser', NULL, NULL, NULL, NULL),
+(439, 'giày xanh thời thượng', 958813, '8730015', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(440, 'đồng hồ nam hồng sành điệu', 947464, '3654022', 1, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(441, 'áo đen thời thượng', 11098, '7345863', 1, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(442, 'gối hồng sành điệu', 297873, '1625727', 1, 'màu đen sành điệu', NULL, NULL, NULL, NULL),
+(443, 'giày tím cá tính', 38284, '9280533', 0, 'màu cam loser', NULL, NULL, NULL, NULL),
+(444, 'quần hồng cánh sen sành điệu', 585118, '9996340', 1, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(445, 'quần xanh cá tính', 584940, '1674118', 0, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(446, 'quần hồng sành điệu', 721199, '3994535', 1, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(447, 'đồng hồ thời trang hồng cánh sen đôn chề', 886234, '5833470', 1, 'màu vàng thượng đẳng', NULL, NULL, NULL, NULL),
+(448, 'gối tím sành điệu', 160285, '9656674', 1, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(449, 'chăn hồng cánh sen cá tính', 681633, '7323783', 1, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(450, 'giày cam sành điệu', 509221, '9977539', 0, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(451, 'đồng hồ thời trang tím cá tính', 81608, '4236801', 1, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(452, 'chăn tím thượng đẳng', 181186, '3895959', 0, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(453, 'áo tím loser', 66935, '5887833', 0, 'màu đen cực ngầu', NULL, NULL, NULL, NULL),
+(454, 'đồng hồ thời trang đen loser', 414641, '7532153', 1, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(455, 'đồng hồ nữ xanh sành điệu', 141836, '4662130', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(456, 'đồng hồ nữ hồng cánh sen cá tính', 598393, '9827062', 0, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(457, 'đồng hồ nam xanh thời thượng', 92247, '6230015', 0, 'màu hồng cánh sen loser', NULL, NULL, NULL, NULL),
+(458, 'gối đen cực ngầu', 677464, '8120065', 0, 'màu vàng đôn chề', NULL, NULL, NULL, NULL),
+(459, 'mũ đỏ loser', 830870, '7911121', 0, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(460, 'đồng hồ nữ cam cá tính', 562481, '2826369', 1, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(461, 'giày xanh cá tính', 860544, '7772530', 0, 'màu vàng thượng đẳng', NULL, NULL, NULL, NULL),
+(462, 'quần tím thượng đẳng', 990165, '6707644', 0, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(463, 'đồng hồ nữ hồng thượng đẳng', 228449, '5832656', 1, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(464, 'đồng hồ nam hồng thượng đẳng', 260202, '2228457', 0, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(465, 'gối hồng cực ngầu', 494854, '5452154', 1, 'màu vàng cực ngầu', NULL, NULL, NULL, NULL),
+(466, 'đồng hồ nữ đỏ loser', 552959, '1107969', 1, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(467, 'đồng hồ nam đỏ sành điệu', 991142, '8690016', 0, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(468, 'đồng hồ thời trang hồng cánh sen cực ngầu', 860062, '4478090', 1, 'màu vàng đôn chề', NULL, NULL, NULL, NULL),
+(469, 'tất cam thời thượng', 289042, '5355363', 0, 'màu tím loser', NULL, NULL, NULL, NULL),
+(470, 'đồng hồ nam cam sành điệu', 613835, '6762542', 0, 'màu hồng cánh sen loser', NULL, NULL, NULL, NULL),
+(471, 'đồng hồ nam tím đôn chề', 637777, '6755391', 1, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(472, 'chăn đỏ loser', 297752, '8939887', 1, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(473, 'giày vàng đôn chề', 242724, '4270761', 1, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(474, 'chăn trắng sành điệu', 935910, '9171728', 1, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(475, 'áo xanh cá tính', 827518, '9492631', 1, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(476, 'áo đỏ loser', 430949, '1044097', 0, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(477, 'chăn hồng cực ngầu', 225373, '1175727', 0, 'màu đen thời thượng', NULL, NULL, NULL, NULL),
+(478, 'đồng hồ nam tím thời thượng', 312544, '3671775', 0, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(479, 'giày vàng sành điệu', 744172, '2609916', 1, 'màu hồng loser', NULL, NULL, NULL, NULL),
+(480, 'tất vàng loser', 521576, '2738136', 1, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(481, 'đồng hồ nữ hồng cánh sen cực ngầu', 47520, '1420322', 0, 'màu cam cá tính', NULL, NULL, NULL, NULL),
+(482, 'gối cam thượng đẳng', 969268, '7675232', 0, 'màu tím loser', NULL, NULL, NULL, NULL),
+(483, 'mũ trắng thời thượng', 356090, '1411361', 1, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(484, 'đồng hồ nữ đỏ đôn chề', 343404, '4505526', 1, 'màu đen sành điệu', NULL, NULL, NULL, NULL),
+(485, 'gối vàng thượng đẳng', 445873, '8248934', 0, 'màu hồng loser', NULL, NULL, NULL, NULL),
+(486, 'đồng hồ nam hồng cánh sen thượng đẳng', 741270, '8774096', 1, 'màu tím sành điệu', NULL, NULL, NULL, NULL),
+(487, 'tất đỏ thời thượng', 838654, '5464653', 0, 'màu vàng sành điệu', NULL, NULL, NULL, NULL),
+(488, 'tất tím cá tính', 714289, '3037627', 1, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(489, 'tất hồng đôn chề', 602965, '3446388', 0, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(490, 'giày trắng cá tính', 551678, '3873799', 1, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(491, 'khăn đen thời thượng', 43390, '1655908', 0, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(492, 'quần xanh thời thượng', 152692, '5775981', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(493, 'chăn đỏ cá tính', 270629, '7664704', 0, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(494, 'mũ hồng sành điệu', 651586, '9210827', 1, 'màu cam cực ngầu', NULL, NULL, NULL, NULL),
+(495, 'đồng hồ thời trang hồng cánh sen thượng đẳng', 842390, '5826267', 1, 'màu vàng đôn chề', NULL, NULL, NULL, NULL),
+(496, 'khăn vàng loser', 612580, '8493956', 0, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(497, 'gối đỏ đôn chề', 107069, '5217655', 0, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(498, 'gối cam thượng đẳng', 290229, '7471701', 0, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(499, 'mũ hồng cá tính', 655130, '8554192', 1, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(500, 'đồng hồ thời trang xanh thượng đẳng', 317528, '8915383', 0, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(501, 'khăn hồng cực ngầu', 961296, '9482951', 1, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(502, 'đồng hồ nam hồng thượng đẳng', 496767, '5411250', 0, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(503, 'đồng hồ nam trắng thời thượng', 276028, '7668262', 0, 'màu vàng cực ngầu', NULL, NULL, NULL, NULL),
+(504, 'tất hồng cá tính', 59172, '2492795', 0, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(505, 'đồng hồ nam xanh sành điệu', 822097, '5372228', 0, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(506, 'khăn tím đôn chề', 445543, '2661743', 1, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(507, 'mũ xanh thượng đẳng', 201986, '7730893', 1, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(508, 'giày hồng cực ngầu', 217716, '6365833', 1, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(509, 'quần tím cực ngầu', 286301, '6517289', 0, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(510, 'đồng hồ nam hồng đôn chề', 333419, '8300089', 0, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(511, 'gối đỏ loser', 144121, '8315366', 1, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(512, 'đồng hồ nam đen đôn chề', 736890, '6362272', 0, 'màu cam loser', NULL, NULL, NULL, NULL),
+(513, 'đồng hồ nam hồng cánh sen cá tính', 374514, '3658310', 0, 'màu hồng cánh sen loser', NULL, NULL, NULL, NULL),
+(514, 'áo hồng cánh sen cực ngầu', 821417, '5296115', 0, 'màu đen thời thượng', NULL, NULL, NULL, NULL),
+(515, 'gối xanh đôn chề', 295895, '8047052', 1, 'màu đen đôn chề', NULL, NULL, NULL, NULL);
+INSERT INTO `product` (`id`, `name`, `price`, `sku`, `status`, `description`, `category_id`, `code`, `created_at`, `modified_at`) VALUES
+(516, 'mũ đỏ thời thượng', 480725, '7554604', 0, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(517, 'đồng hồ nam trắng sành điệu', 815241, '8412952', 0, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(518, 'gối hồng cá tính', 865284, '8448514', 1, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(519, 'gối hồng thời thượng', 701284, '5313791', 0, 'màu vàng sành điệu', NULL, NULL, NULL, NULL),
+(520, 'khăn vàng sành điệu', 933913, '6855576', 1, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(521, 'đồng hồ nam xanh thời thượng', 359496, '5736515', 0, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(522, 'đồng hồ thời trang xanh sành điệu', 95724, '7078916', 0, 'màu cam cực ngầu', NULL, NULL, NULL, NULL),
+(523, 'quần hồng cánh sen đôn chề', 101041, '6691716', 0, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(524, 'tất hồng cánh sen loser', 246839, '5162729', 1, 'màu hồng sành điệu', NULL, NULL, NULL, NULL),
+(525, 'mũ hồng cánh sen thời thượng', 645920, '9659871', 0, 'màu hồng cánh sen đôn chề', NULL, NULL, NULL, NULL),
+(526, 'đồng hồ nữ xanh thời thượng', 877995, '4920060', 0, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(527, 'đồng hồ nữ trắng cực ngầu', 539727, '7500691', 0, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(528, 'khăn xanh cá tính', 295822, '4006005', 1, 'màu tím loser', NULL, NULL, NULL, NULL),
+(529, 'đồng hồ nữ đen loser', 153234, '3897318', 1, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(530, 'khăn cam thời thượng', 339264, '3710109', 1, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(531, 'đồng hồ nữ đen cực ngầu', 849142, '3762222', 0, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(532, 'quần xanh thượng đẳng', 683227, '5615961', 0, 'màu đen thời thượng', NULL, NULL, NULL, NULL),
+(533, 'quần cam thượng đẳng', 946203, '7907648', 0, 'màu hồng cánh sen đôn chề', NULL, NULL, NULL, NULL),
+(534, 'tất đỏ thời thượng', 347065, '3681976', 0, 'màu vàng thượng đẳng', NULL, NULL, NULL, NULL),
+(535, 'giày xanh loser', 22042, '7855364', 0, 'màu tím loser', NULL, NULL, NULL, NULL),
+(536, 'khăn trắng loser', 488195, '6440923', 1, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(537, 'đồng hồ thời trang tím thời thượng', 238699, '2285295', 0, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(538, 'áo tím thời thượng', 534704, '3816037', 0, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(539, 'chăn cam loser', 140546, '6711260', 1, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(540, 'khăn hồng cánh sen thời thượng', 969235, '2340147', 1, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(541, 'quần vàng đôn chề', 165055, '6124751', 1, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(542, 'đồng hồ nam đen loser', 224695, '2993825', 1, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(543, 'áo xanh thượng đẳng', 415609, '7869031', 1, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(544, 'giày xanh sành điệu', 217232, '1896990', 0, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(545, 'khăn cam sành điệu', 707082, '2303621', 0, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(546, 'đồng hồ nam hồng cánh sen thượng đẳng', 871115, '6971312', 1, 'màu tím loser', NULL, NULL, NULL, NULL),
+(547, 'gối đen thượng đẳng', 354241, '1838868', 0, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(548, 'áo đỏ thời thượng', 760620, '7629065', 1, 'màu cam cá tính', NULL, NULL, NULL, NULL),
+(549, 'mũ xanh thời thượng', 985647, '9133321', 0, 'màu đen loser', NULL, NULL, NULL, NULL),
+(550, 'gối xanh loser', 765356, '2699263', 1, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(551, 'gối hồng cánh sen đôn chề', 450764, '3589657', 0, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(552, 'tất cam đôn chề', 862976, '7368455', 0, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(553, 'khăn đỏ đôn chề', 338427, '4459793', 1, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(554, 'chăn xanh đôn chề', 156697, '7501970', 0, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(555, 'mũ hồng loser', 534557, '3059519', 0, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(556, 'tất trắng đôn chề', 467397, '6582143', 1, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(557, 'chăn xanh cá tính', 161638, '4789831', 1, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(558, 'đồng hồ nam đỏ loser', 848466, '9840173', 0, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(559, 'khăn hồng cánh sen thượng đẳng', 12169, '9533880', 1, 'màu hồng sành điệu', NULL, NULL, NULL, NULL),
+(560, 'đồng hồ nữ vàng cá tính', 216853, '3318887', 1, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(561, 'đồng hồ nam cam sành điệu', 120699, '1548881', 0, 'màu vàng đôn chề', NULL, NULL, NULL, NULL),
+(562, 'quần hồng cánh sen cực ngầu', 515328, '1624106', 0, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(563, 'mũ xanh loser', 736228, '1595244', 1, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(564, 'mũ xanh thượng đẳng', 661513, '9049563', 0, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(565, 'áo vàng cá tính', 189703, '6220395', 0, 'màu cam loser', NULL, NULL, NULL, NULL),
+(566, 'quần đỏ thời thượng', 991941, '4803186', 1, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(567, 'áo xanh cá tính', 813596, '3874014', 0, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(568, 'gối đen đôn chề', 261233, '3087464', 1, 'màu vàng thượng đẳng', NULL, NULL, NULL, NULL),
+(569, 'tất hồng cánh sen cực ngầu', 558714, '8528565', 0, 'màu xanh cực ngầu', NULL, NULL, NULL, NULL),
+(570, 'chăn đỏ thời thượng', 889559, '5787668', 1, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(571, 'tất xanh cực ngầu', 332805, '2755044', 0, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(572, 'giày trắng sành điệu', 121857, '8395324', 0, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(573, 'gối tím thượng đẳng', 479545, '1539326', 1, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(574, 'tất đen loser', 872330, '1280669', 0, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(575, 'đồng hồ nam tím thượng đẳng', 694453, '2766523', 0, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(576, 'gối đen cá tính', 191883, '1450822', 1, 'màu tím loser', NULL, NULL, NULL, NULL),
+(577, 'gối tím cá tính', 784810, '2265369', 1, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(578, 'giày vàng cực ngầu', 404303, '8062816', 0, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(579, 'mũ xanh thời thượng', 320730, '1279139', 1, 'màu vàng đôn chề', NULL, NULL, NULL, NULL),
+(580, 'đồng hồ nam vàng cá tính', 554644, '9798963', 0, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(581, 'đồng hồ thời trang xanh loser', 791094, '7685815', 0, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(582, 'áo xanh cực ngầu', 492185, '8505642', 1, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(583, 'đồng hồ nữ vàng loser', 21509, '6180515', 0, 'màu vàng sành điệu', NULL, NULL, NULL, NULL),
+(584, 'đồng hồ nữ hồng cực ngầu', 772033, '4959984', 0, 'màu tím loser', NULL, NULL, NULL, NULL),
+(585, 'đồng hồ thời trang đen thượng đẳng', 260197, '3776960', 0, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(586, 'đồng hồ nữ hồng cánh sen đôn chề', 216660, '4837188', 0, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(587, 'khăn tím loser', 195225, '2845477', 1, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(588, 'khăn đỏ cực ngầu', 921820, '8225444', 1, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(589, 'đồng hồ nam cam đôn chề', 414630, '2571391', 0, 'màu vàng cực ngầu', NULL, NULL, NULL, NULL),
+(590, 'tất đen loser', 446177, '6778757', 1, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(591, 'đồng hồ nữ hồng cánh sen cực ngầu', 283657, '4363914', 1, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(592, 'đồng hồ nam vàng cá tính', 22276, '1708164', 0, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(593, 'đồng hồ thời trang xanh đôn chề', 29632, '7091938', 0, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(594, 'khăn đen cá tính', 781046, '7786635', 1, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(595, 'đồng hồ nam cam thượng đẳng', 169957, '1195646', 0, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(596, 'khăn tím đôn chề', 830808, '2549894', 0, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(597, 'gối đỏ thời thượng', 814222, '9551072', 1, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(598, 'áo xanh đôn chề', 287760, '5749975', 1, 'màu cam cực ngầu', NULL, NULL, NULL, NULL),
+(599, 'khăn đỏ thượng đẳng', 442948, '1715487', 0, 'màu hồng cánh sen đôn chề', NULL, NULL, NULL, NULL),
+(600, 'chăn đỏ cực ngầu', 656456, '8737422', 1, 'màu cam cá tính', NULL, NULL, NULL, NULL),
+(601, 'khăn hồng cực ngầu', 320115, '5225959', 0, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(602, 'quần xanh thời thượng', 643367, '7310593', 1, 'màu cam loser', NULL, NULL, NULL, NULL),
+(603, 'quần hồng cánh sen đôn chề', 553861, '9500705', 0, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(604, 'đồng hồ nam hồng loser', 659932, '2278651', 1, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(605, 'đồng hồ nam trắng cá tính', 857191, '3841876', 1, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(606, 'chăn cam thượng đẳng', 524028, '4014668', 1, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(607, 'khăn tím sành điệu', 370354, '5125942', 0, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(608, 'gối cam loser', 335744, '4436549', 1, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(609, 'giày hồng cánh sen cá tính', 384604, '2260160', 0, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(610, 'áo đỏ đôn chề', 253318, '9977756', 1, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(611, 'mũ hồng đôn chề', 884450, '8675428', 0, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(612, 'mũ xanh thượng đẳng', 985766, '3730704', 0, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(613, 'tất trắng loser', 257118, '7570739', 0, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(614, 'giày hồng cực ngầu', 421052, '6587270', 0, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(615, 'đồng hồ thời trang tím thượng đẳng', 379610, '8863717', 1, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(616, 'quần cam sành điệu', 711654, '5521346', 1, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(617, 'tất cam loser', 385722, '6795299', 1, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(618, 'mũ vàng loser', 325291, '1576372', 0, 'màu vàng sành điệu', NULL, NULL, NULL, NULL),
+(619, 'đồng hồ nam xanh loser', 894471, '6659291', 0, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(620, 'áo vàng thời thượng', 392508, '3027243', 1, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(621, 'tất đen đôn chề', 330670, '4743342', 0, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(622, 'chăn đỏ cực ngầu', 221645, '1180256', 1, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(623, 'đồng hồ thời trang trắng thời thượng', 117547, '6602795', 1, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(624, 'đồng hồ nam trắng cá tính', 647281, '7001128', 1, 'màu đỏ cực ngầu', NULL, NULL, NULL, NULL),
+(625, 'tất vàng thời thượng', 809992, '5208017', 0, 'màu cam cực ngầu', NULL, NULL, NULL, NULL),
+(626, 'áo đen thời thượng', 630620, '9369911', 0, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(627, 'chăn hồng cánh sen cá tính', 536678, '5311463', 1, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(628, 'đồng hồ thời trang đen loser', 631882, '4952534', 0, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(629, 'tất trắng loser', 64129, '9361372', 0, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(630, 'mũ hồng loser', 855445, '3152641', 0, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(631, 'quần xanh loser', 843429, '8536259', 0, 'màu tím sành điệu', NULL, NULL, NULL, NULL),
+(632, 'đồng hồ nữ tím cực ngầu', 114386, '6774085', 1, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(633, 'quần đen cực ngầu', 178266, '1505851', 1, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(634, 'quần xanh thời thượng', 23045, '4672322', 1, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(635, 'áo cam cá tính', 597284, '4644367', 1, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(636, 'đồng hồ nam vàng cá tính', 885529, '6958126', 1, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(637, 'đồng hồ nữ tím thời thượng', 193540, '1462514', 1, 'màu tím loser', NULL, NULL, NULL, NULL),
+(638, 'quần đen sành điệu', 805910, '1499294', 0, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(639, 'khăn hồng cánh sen loser', 551026, '1668832', 0, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(640, 'đồng hồ nữ trắng thượng đẳng', 509376, '7258431', 0, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(641, 'quần xanh cá tính', 358548, '6588326', 1, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(642, 'đồng hồ nữ vàng thời thượng', 721064, '1396144', 0, 'màu đen cực ngầu', NULL, NULL, NULL, NULL),
+(643, 'chăn tím sành điệu', 221214, '2874794', 1, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(644, 'đồng hồ nữ cam cá tính', 673258, '4860001', 0, 'màu vàng cực ngầu', NULL, NULL, NULL, NULL),
+(645, 'tất xanh đôn chề', 91538, '1866310', 1, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(646, 'đồng hồ nam đen sành điệu', 353625, '4734776', 0, 'màu hồng cánh sen loser', NULL, NULL, NULL, NULL),
+(647, 'chăn hồng cánh sen đôn chề', 505602, '9253821', 0, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(648, 'đồng hồ thời trang tím thời thượng', 959082, '1773573', 1, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(649, 'áo hồng cánh sen loser', 802892, '9865246', 0, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(650, 'khăn đen loser', 805819, '1823459', 0, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(651, 'khăn hồng thời thượng', 389783, '4345859', 1, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(652, 'đồng hồ thời trang hồng sành điệu', 81418, '8137088', 1, 'màu hồng cánh sen đôn chề', NULL, NULL, NULL, NULL),
+(653, 'đồng hồ nam đỏ thời thượng', 201141, '2059310', 0, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(654, 'gối hồng cực ngầu', 434810, '7686321', 0, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(655, 'tất xanh loser', 240126, '5891772', 1, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(656, 'tất đỏ loser', 224785, '1823817', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(657, 'đồng hồ nữ cam sành điệu', 733577, '7389929', 0, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(658, 'giày trắng cá tính', 333946, '1176489', 0, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(659, 'mũ trắng cá tính', 645630, '5870233', 0, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(660, 'tất tím cá tính', 509508, '2917577', 0, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(661, 'mũ hồng cánh sen cá tính', 656908, '4498067', 1, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(662, 'mũ hồng cánh sen đôn chề', 670771, '8179565', 1, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(663, 'đồng hồ thời trang hồng thời thượng', 692746, '1172439', 1, 'màu cam loser', NULL, NULL, NULL, NULL),
+(664, 'đồng hồ thời trang hồng cánh sen loser', 702018, '1570633', 0, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(665, 'áo vàng cực ngầu', 267341, '7457803', 0, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(666, 'tất hồng thời thượng', 258311, '5074542', 0, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(667, 'đồng hồ nữ hồng cánh sen cá tính', 794970, '9346721', 1, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(668, 'mũ đen sành điệu', 514751, '8094017', 0, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(669, 'chăn hồng cực ngầu', 736076, '5383318', 1, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(670, 'chăn hồng cánh sen cực ngầu', 529545, '6022840', 0, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(671, 'áo đỏ sành điệu', 195974, '4899209', 1, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(672, 'đồng hồ nam tím loser', 859254, '4363533', 1, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(673, 'tất xanh thượng đẳng', 489861, '5746059', 1, 'màu đen loser', NULL, NULL, NULL, NULL),
+(674, 'giày trắng loser', 790860, '6635141', 0, 'màu hồng loser', NULL, NULL, NULL, NULL),
+(675, 'đồng hồ nam hồng sành điệu', 602835, '6948711', 1, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(676, 'chăn cam loser', 206566, '1335387', 0, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(677, 'khăn đỏ thượng đẳng', 752309, '4382846', 1, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(678, 'quần tím thời thượng', 396489, '8915285', 1, 'màu cam loser', NULL, NULL, NULL, NULL),
+(679, 'tất trắng thượng đẳng', 413306, '4266232', 1, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(680, 'mũ đỏ cá tính', 707607, '4242606', 1, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(681, 'giày hồng loser', 854772, '1632361', 1, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(682, 'đồng hồ nữ hồng loser', 759360, '6971141', 0, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(683, 'khăn đen loser', 931763, '9552571', 0, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(684, 'đồng hồ nữ vàng sành điệu', 245284, '2489015', 0, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(685, 'áo đen thời thượng', 330726, '3889513', 1, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(686, 'tất hồng đôn chề', 912313, '2880266', 0, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(687, 'đồng hồ nữ vàng loser', 661294, '3685461', 1, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(688, 'đồng hồ nữ đỏ cá tính', 622645, '1481489', 0, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(689, 'giày đỏ cực ngầu', 29247, '9555382', 0, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(690, 'gối trắng loser', 562723, '4697616', 0, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(691, 'đồng hồ thời trang trắng sành điệu', 462713, '9317178', 1, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(692, 'đồng hồ thời trang trắng sành điệu', 938314, '9847790', 0, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(693, 'đồng hồ thời trang cam đôn chề', 779180, '3851627', 0, 'màu cam đôn chề', NULL, NULL, NULL, NULL),
+(694, 'gối đen sành điệu', 511767, '6304330', 1, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(695, 'đồng hồ nữ vàng cực ngầu', 174412, '3243238', 0, 'màu vàng sành điệu', NULL, NULL, NULL, NULL),
+(696, 'áo hồng cánh sen đôn chề', 806584, '5106276', 1, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(697, 'giày cam loser', 59216, '5870316', 1, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(698, 'đồng hồ nam hồng cánh sen loser', 453875, '5952169', 0, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(699, 'chăn trắng đôn chề', 467640, '5973706', 0, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(700, 'tất vàng loser', 424400, '8512894', 0, 'màu vàng sành điệu', NULL, NULL, NULL, NULL),
+(701, 'chăn cam thượng đẳng', 542116, '2213886', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(702, 'chăn xanh thượng đẳng', 933906, '6823703', 0, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(703, 'đồng hồ thời trang hồng sành điệu', 594520, '9297663', 1, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(704, 'khăn tím cá tính', 277114, '4602078', 0, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(705, 'đồng hồ nữ cam thượng đẳng', 981538, '1943749', 0, 'màu tím sành điệu', NULL, NULL, NULL, NULL),
+(706, 'quần cam cực ngầu', 749319, '7879049', 1, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(707, 'đồng hồ nam trắng cá tính', 657766, '5571644', 1, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(708, 'đồng hồ thời trang xanh thời thượng', 48635, '2531850', 1, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(709, 'tất đỏ cực ngầu', 450010, '7573261', 0, 'màu đỏ cực ngầu', NULL, NULL, NULL, NULL),
+(710, 'mũ cam sành điệu', 792772, '5908274', 0, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(711, 'đồng hồ nam đen thời thượng', 474904, '4710590', 1, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(712, 'áo đỏ thời thượng', 749428, '6608279', 0, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(713, 'đồng hồ nam trắng thượng đẳng', 166691, '9710462', 1, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(714, 'mũ đen thượng đẳng', 387252, '6418234', 0, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(715, 'gối hồng thời thượng', 498494, '8103428', 1, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(716, 'đồng hồ thời trang cam đôn chề', 912060, '1956719', 1, 'màu vàng đôn chề', NULL, NULL, NULL, NULL),
+(717, 'chăn hồng cánh sen sành điệu', 301850, '5757310', 1, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(718, 'đồng hồ nam trắng sành điệu', 660053, '2812906', 1, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(719, 'mũ hồng thời thượng', 153162, '1895207', 1, 'màu hồng loser', NULL, NULL, NULL, NULL),
+(720, 'áo đen thời thượng', 997938, '4646605', 1, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(721, 'chăn vàng loser', 833408, '8285656', 0, 'màu vàng thượng đẳng', NULL, NULL, NULL, NULL),
+(722, 'đồng hồ nam xanh cá tính', 849309, '6103571', 0, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(723, 'áo trắng sành điệu', 377814, '2914564', 0, 'màu đỏ cực ngầu', NULL, NULL, NULL, NULL),
+(724, 'tất vàng sành điệu', 727578, '2920016', 0, 'màu hồng cánh sen loser', NULL, NULL, NULL, NULL),
+(725, 'tất tím thượng đẳng', 339360, '1037757', 1, 'màu đen cực ngầu', NULL, NULL, NULL, NULL),
+(726, 'đồng hồ nữ trắng sành điệu', 430721, '6149968', 0, 'màu tím sành điệu', NULL, NULL, NULL, NULL),
+(727, 'đồng hồ thời trang đen cá tính', 846848, '8037993', 0, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(728, 'tất hồng cánh sen loser', 811850, '4194761', 1, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(729, 'giày tím loser', 481861, '2999383', 0, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(730, 'gối hồng đôn chề', 631399, '1469248', 1, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(731, 'đồng hồ nam đen sành điệu', 369152, '4500992', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(732, 'mũ đỏ thời thượng', 711293, '2115469', 1, 'màu vàng thượng đẳng', NULL, NULL, NULL, NULL),
+(733, 'đồng hồ nam đỏ thời thượng', 732808, '6382068', 1, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(734, 'gối trắng thời thượng', 204387, '9043352', 0, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(735, 'khăn hồng cánh sen loser', 323629, '7227206', 1, 'màu vàng cực ngầu', NULL, NULL, NULL, NULL),
+(736, 'giày trắng thời thượng', 380282, '9341765', 1, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(737, 'đồng hồ nam vàng thượng đẳng', 664197, '4874414', 0, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(738, 'mũ tím đôn chề', 785586, '6373269', 0, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(739, 'gối đỏ đôn chề', 388882, '1475887', 0, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(740, 'gối cam thời thượng', 684022, '8806460', 0, 'màu đen thời thượng', NULL, NULL, NULL, NULL),
+(741, 'khăn cam đôn chề', 225546, '2210500', 0, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(742, 'áo đỏ đôn chề', 719793, '2372546', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(743, 'mũ đen cực ngầu', 746576, '9003069', 0, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(744, 'đồng hồ nam trắng thượng đẳng', 699460, '2396799', 1, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(745, 'áo đen thời thượng', 551682, '3860236', 1, 'màu đỏ cực ngầu', NULL, NULL, NULL, NULL),
+(746, 'gối xanh thời thượng', 278588, '6206176', 1, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(747, 'đồng hồ nữ trắng loser', 662324, '3553394', 0, 'màu đen loser', NULL, NULL, NULL, NULL),
+(748, 'chăn cam thời thượng', 884291, '8958088', 0, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(749, 'tất tím thượng đẳng', 492456, '9104166', 0, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(750, 'khăn tím thượng đẳng', 167935, '4253214', 0, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(751, 'đồng hồ thời trang xanh loser', 941383, '6870591', 1, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(752, 'đồng hồ thời trang trắng loser', 972505, '6117241', 0, 'màu tím loser', NULL, NULL, NULL, NULL),
+(753, 'giày đỏ thời thượng', 442920, '4778801', 0, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(754, 'mũ hồng cánh sen sành điệu', 566256, '7664971', 0, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(755, 'chăn hồng cánh sen sành điệu', 477592, '8520302', 1, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(756, 'đồng hồ nam trắng cá tính', 15287, '3010410', 0, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(757, 'khăn tím đôn chề', 752878, '4514607', 1, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(758, 'chăn cam sành điệu', 169463, '1039782', 0, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(759, 'áo đen sành điệu', 388147, '8866833', 1, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(760, 'quần cam thượng đẳng', 877012, '5884254', 1, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(761, 'đồng hồ nữ đen loser', 930069, '9661356', 0, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(762, 'đồng hồ nữ tím đôn chề', 612918, '2123210', 0, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(763, 'đồng hồ nữ đỏ thượng đẳng', 298180, '9713765', 1, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(764, 'mũ tím đôn chề', 101300, '7563643', 0, 'màu tím sành điệu', NULL, NULL, NULL, NULL),
+(765, 'đồng hồ nam vàng loser', 277263, '9319631', 0, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(766, 'mũ xanh sành điệu', 179781, '9380278', 0, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(767, 'chăn cam đôn chề', 769513, '9993783', 0, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(768, 'áo vàng đôn chề', 148207, '4897436', 0, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(769, 'áo trắng sành điệu', 42830, '3439848', 1, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(770, 'quần tím cực ngầu', 428402, '9896550', 1, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(771, 'chăn đen cá tính', 760654, '8093829', 0, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(772, 'giày tím thời thượng', 36601, '2728246', 1, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(773, 'đồng hồ nam hồng cánh sen cá tính', 636388, '7687856', 0, 'màu vàng thượng đẳng', NULL, NULL, NULL, NULL),
+(774, 'mũ đỏ sành điệu', 212084, '9636276', 0, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(775, 'gối hồng cánh sen đôn chề', 442132, '8372847', 1, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(776, 'mũ đỏ cá tính', 988516, '9939232', 0, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(777, 'đồng hồ nữ trắng sành điệu', 959536, '9316866', 1, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(778, 'gối đen đôn chề', 415414, '3966672', 0, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(779, 'đồng hồ nữ hồng cánh sen cực ngầu', 167504, '8972795', 0, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(780, 'quần tím thời thượng', 222152, '3509248', 1, 'màu vàng sành điệu', NULL, NULL, NULL, NULL),
+(781, 'đồng hồ nam đen thượng đẳng', 162747, '1735777', 1, 'màu hồng sành điệu', NULL, NULL, NULL, NULL),
+(782, 'đồng hồ nữ vàng thời thượng', 499781, '8125138', 0, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(783, 'gối xanh cá tính', 274914, '7513639', 0, 'màu cam đôn chề', NULL, NULL, NULL, NULL),
+(784, 'tất tím đôn chề', 396848, '6672894', 0, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(785, 'giày trắng thời thượng', 580960, '9862959', 1, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(786, 'quần vàng thời thượng', 311653, '5660265', 1, 'màu vàng cực ngầu', NULL, NULL, NULL, NULL),
+(787, 'đồng hồ thời trang cam cá tính', 913868, '3113267', 0, 'màu xanh cực ngầu', NULL, NULL, NULL, NULL),
+(788, 'gối đen thời thượng', 943163, '7804118', 0, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(789, 'áo hồng đôn chề', 280107, '2696706', 0, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(790, 'gối vàng sành điệu', 336069, '1786569', 1, 'màu cam loser', NULL, NULL, NULL, NULL),
+(791, 'đồng hồ thời trang đỏ sành điệu', 775820, '5883797', 0, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(792, 'chăn cam cực ngầu', 818737, '1785116', 1, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(793, 'áo tím cực ngầu', 779180, '2981538', 0, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(794, 'quần tím thời thượng', 146437, '1927324', 0, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(795, 'quần hồng thượng đẳng', 409287, '8719879', 1, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(796, 'tất hồng loser', 583090, '2872651', 0, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(797, 'mũ vàng thượng đẳng', 236021, '2352346', 1, 'màu tím loser', NULL, NULL, NULL, NULL),
+(798, 'chăn đỏ thượng đẳng', 868752, '2745171', 0, 'màu đỏ cá tính', NULL, NULL, NULL, NULL),
+(799, 'mũ hồng cánh sen thượng đẳng', 799148, '7000703', 0, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(800, 'đồng hồ nam đen cá tính', 689259, '4308698', 1, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(801, 'tất hồng cánh sen sành điệu', 144221, '7438539', 1, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(802, 'tất tím thượng đẳng', 640264, '6557258', 1, 'màu tím loser', NULL, NULL, NULL, NULL),
+(803, 'mũ hồng cực ngầu', 500360, '8696254', 0, 'màu hồng cánh sen đôn chề', NULL, NULL, NULL, NULL),
+(804, 'đồng hồ nữ xanh loser', 694097, '1306960', 0, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(805, 'khăn đen sành điệu', 160711, '9493865', 0, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(806, 'áo cam thời thượng', 596862, '5796007', 0, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(807, 'đồng hồ thời trang hồng cánh sen cá tính', 286521, '7738539', 0, 'màu cam cá tính', NULL, NULL, NULL, NULL),
+(808, 'đồng hồ nam đỏ thời thượng', 570623, '2319728', 0, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(809, 'khăn xanh cá tính', 568108, '3404901', 1, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(810, 'đồng hồ nữ vàng loser', 262339, '1389132', 1, 'màu đen loser', NULL, NULL, NULL, NULL),
+(811, 'tất tím thời thượng', 153921, '6231549', 0, 'màu vàng đôn chề', NULL, NULL, NULL, NULL),
+(812, 'gối đen loser', 938897, '1148729', 0, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(813, 'quần cam thời thượng', 325550, '9537158', 1, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(814, 'chăn trắng cực ngầu', 648517, '2853629', 1, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(815, 'chăn xanh loser', 625888, '1751301', 1, 'màu đỏ cực ngầu', NULL, NULL, NULL, NULL),
+(816, 'mũ cam cá tính', 430593, '5516343', 0, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(817, 'đồng hồ nam trắng cực ngầu', 627832, '1813776', 1, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(818, 'gối đen sành điệu', 955773, '1976074', 0, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(819, 'tất đỏ cực ngầu', 333580, '6380486', 0, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(820, 'khăn xanh thời thượng', 254463, '2126904', 1, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(821, 'giày trắng cá tính', 385028, '2152336', 0, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(822, 'áo đỏ cực ngầu', 556147, '5660178', 1, 'màu đen cực ngầu', NULL, NULL, NULL, NULL),
+(823, 'đồng hồ nữ xanh đôn chề', 238630, '1140761', 1, 'màu cam đôn chề', NULL, NULL, NULL, NULL),
+(824, 'đồng hồ thời trang tím cá tính', 799706, '3115004', 0, 'màu vàng thượng đẳng', NULL, NULL, NULL, NULL),
+(825, 'đồng hồ nữ hồng cánh sen thượng đẳng', 209312, '2825614', 0, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(826, 'gối vàng thượng đẳng', 875562, '3168870', 0, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(827, 'đồng hồ nam hồng cánh sen đôn chề', 541816, '7664174', 0, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(828, 'giày hồng thượng đẳng', 385738, '4906628', 0, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(829, 'tất đen thượng đẳng', 577516, '4908474', 1, 'màu hồng cánh sen đôn chề', NULL, NULL, NULL, NULL),
+(830, 'gối hồng cánh sen thời thượng', 936715, '6026031', 0, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(831, 'áo đen thời thượng', 86498, '8128774', 0, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(832, 'mũ đen đôn chề', 583720, '5932742', 0, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(833, 'quần xanh cá tính', 334003, '2891298', 0, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(834, 'gối cam đôn chề', 44595, '1748453', 1, 'màu trắng cá tính', NULL, NULL, NULL, NULL),
+(835, 'giày tím thời thượng', 48224, '4095164', 0, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(836, 'quần đỏ cá tính', 731101, '8382550', 1, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(837, 'mũ đỏ thượng đẳng', 412485, '3010716', 0, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(838, 'áo trắng cực ngầu', 845290, '3794588', 1, 'màu cam cực ngầu', NULL, NULL, NULL, NULL),
+(839, 'quần trắng sành điệu', 938719, '4384840', 0, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(840, 'đồng hồ thời trang đỏ sành điệu', 576713, '9369021', 1, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(841, 'khăn vàng thời thượng', 874091, '7150538', 0, 'màu hồng cánh sen loser', NULL, NULL, NULL, NULL),
+(842, 'đồng hồ thời trang hồng cực ngầu', 404172, '2482875', 0, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(843, 'quần cam thời thượng', 387273, '8084887', 1, 'màu đen sành điệu', NULL, NULL, NULL, NULL),
+(844, 'quần tím thời thượng', 82015, '8685224', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(845, 'quần hồng cá tính', 63378, '7690361', 0, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(846, 'quần hồng cánh sen thượng đẳng', 28140, '4087790', 0, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(847, 'tất vàng thượng đẳng', 566650, '7950559', 0, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(848, 'đồng hồ nữ vàng loser', 165986, '3004126', 0, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(849, 'giày trắng cá tính', 672764, '8992393', 1, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(850, 'đồng hồ thời trang vàng loser', 439413, '2336523', 0, 'màu hồng cánh sen loser', NULL, NULL, NULL, NULL),
+(851, 'đồng hồ nữ hồng loser', 166606, '9382809', 1, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(852, 'mũ cam cá tính', 462902, '1111166', 0, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(853, 'giày tím cực ngầu', 717253, '9274835', 1, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(854, 'giày tím đôn chề', 849471, '2890416', 1, 'màu tím sành điệu', NULL, NULL, NULL, NULL),
+(855, 'giày trắng cực ngầu', 109640, '7797882', 1, 'màu xanh cực ngầu', NULL, NULL, NULL, NULL),
+(856, 'tất trắng loser', 266965, '4278551', 0, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(857, 'đồng hồ nữ hồng cánh sen cá tính', 58547, '5553168', 1, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(858, 'mũ trắng thời thượng', 705707, '8313015', 0, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(859, 'khăn đỏ cá tính', 530663, '4229912', 1, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(860, 'đồng hồ nữ xanh đôn chề', 612646, '2526833', 1, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(861, 'áo trắng sành điệu', 594507, '3711132', 1, 'màu đen loser', NULL, NULL, NULL, NULL),
+(862, 'khăn hồng cánh sen cá tính', 29857, '9257360', 0, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(863, 'đồng hồ nữ đỏ đôn chề', 448360, '7321805', 0, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(864, 'đồng hồ thời trang cam sành điệu', 613264, '1394804', 1, 'màu đen loser', NULL, NULL, NULL, NULL),
+(865, 'đồng hồ nam tím cá tính', 198562, '1105960', 1, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(866, 'đồng hồ nam xanh đôn chề', 800632, '5125685', 0, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(867, 'quần xanh thượng đẳng', 123142, '1829512', 0, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(868, 'đồng hồ nữ hồng sành điệu', 164792, '4454694', 1, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(869, 'gối xanh thời thượng', 276684, '1848558', 0, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(870, 'đồng hồ thời trang xanh thượng đẳng', 387461, '7324270', 1, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(871, 'tất đen loser', 322321, '9570918', 1, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(872, 'quần đen thời thượng', 82305, '1645643', 0, 'màu hồng cánh sen loser', NULL, NULL, NULL, NULL),
+(873, 'áo tím đôn chề', 767386, '4484623', 0, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(874, 'đồng hồ nam vàng thượng đẳng', 255236, '9602663', 0, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(875, 'chăn vàng loser', 479200, '4382573', 1, 'màu vàng đôn chề', NULL, NULL, NULL, NULL),
+(876, 'đồng hồ thời trang tím thời thượng', 778009, '3646097', 1, 'màu tím sành điệu', NULL, NULL, NULL, NULL),
+(877, 'đồng hồ nam đen đôn chề', 912512, '5819503', 0, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(878, 'đồng hồ nữ đỏ cá tính', 283218, '1360616', 0, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(879, 'tất hồng cánh sen thượng đẳng', 381746, '1923456', 0, 'màu cam đôn chề', NULL, NULL, NULL, NULL),
+(880, 'tất vàng đôn chề', 147201, '3537008', 1, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(881, 'mũ vàng cực ngầu', 836205, '2634781', 0, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(882, 'gối tím sành điệu', 480032, '7811561', 0, 'màu tím loser', NULL, NULL, NULL, NULL),
+(883, 'đồng hồ thời trang tím sành điệu', 469157, '8802806', 0, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(884, 'gối tím đôn chề', 979593, '6060946', 1, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(885, 'tất vàng thượng đẳng', 502794, '3374462', 0, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(886, 'chăn tím cực ngầu', 280481, '6654394', 0, 'màu tím loser', NULL, NULL, NULL, NULL),
+(887, 'áo cam thời thượng', 136391, '2295820', 0, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(888, 'đồng hồ thời trang tím sành điệu', 251152, '1717354', 1, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(889, 'đồng hồ thời trang trắng loser', 311137, '5459876', 1, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(890, 'tất tím đôn chề', 710599, '7650251', 0, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(891, 'chăn tím thượng đẳng', 946705, '4618484', 0, 'màu cam cá tính', NULL, NULL, NULL, NULL),
+(892, 'tất hồng cánh sen sành điệu', 499761, '8890383', 0, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(893, 'quần trắng cực ngầu', 338696, '6108396', 0, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(894, 'tất xanh thời thượng', 669250, '7645018', 0, 'màu đen cá tính', NULL, NULL, NULL, NULL),
+(895, 'giày hồng sành điệu', 194991, '3297678', 1, 'màu cam loser', NULL, NULL, NULL, NULL),
+(896, 'khăn hồng đôn chề', 319872, '8534700', 1, 'màu cam cực ngầu', NULL, NULL, NULL, NULL),
+(897, 'đồng hồ nữ vàng loser', 61938, '6799476', 0, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(898, 'quần tím sành điệu', 447626, '2105761', 0, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(899, 'giày cam thượng đẳng', 486532, '6351423', 1, 'màu hồng cánh sen đôn chề', NULL, NULL, NULL, NULL),
+(900, 'khăn trắng đôn chề', 703154, '4584716', 1, 'màu đỏ thượng đẳng', NULL, NULL, NULL, NULL),
+(901, 'khăn tím sành điệu', 826959, '4767932', 0, 'màu xanh sành điệu', NULL, NULL, NULL, NULL),
+(902, 'đồng hồ nam hồng sành điệu', 432967, '7546846', 0, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(903, 'gối trắng sành điệu', 227756, '7494208', 1, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(904, 'áo xanh cực ngầu', 445009, '8050477', 1, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(905, 'đồng hồ thời trang tím cá tính', 700080, '4084844', 0, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(906, 'chăn tím loser', 564919, '1702256', 1, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(907, 'mũ vàng sành điệu', 413528, '7768212', 0, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(908, 'giày cam sành điệu', 87789, '9251773', 0, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(909, 'quần cam cá tính', 617594, '9676076', 1, 'màu cam thượng đẳng', NULL, NULL, NULL, NULL),
+(910, 'đồng hồ nữ trắng thời thượng', 250901, '2782791', 0, 'màu xanh cực ngầu', NULL, NULL, NULL, NULL),
+(911, 'đồng hồ thời trang đỏ đôn chề', 553521, '9064768', 1, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(912, 'chăn xanh sành điệu', 514371, '4978860', 0, 'màu vàng thượng đẳng', NULL, NULL, NULL, NULL),
+(913, 'tất đỏ đôn chề', 806569, '8445933', 0, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(914, 'giày hồng cực ngầu', 910990, '1482087', 0, 'màu xanh cực ngầu', NULL, NULL, NULL, NULL),
+(915, 'đồng hồ thời trang hồng cực ngầu', 926736, '9637689', 0, 'màu tím loser', NULL, NULL, NULL, NULL),
+(916, 'chăn hồng sành điệu', 335166, '6042752', 0, 'màu hồng cánh sen loser', NULL, NULL, NULL, NULL),
+(917, 'áo đen sành điệu', 621107, '1096200', 1, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(918, 'chăn đỏ cực ngầu', 661311, '5192738', 1, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(919, 'quần đen cực ngầu', 488568, '8624137', 1, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(920, 'chăn cam cực ngầu', 834320, '1789399', 0, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(921, 'giày xanh thời thượng', 871692, '1655016', 1, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(922, 'chăn trắng cực ngầu', 108648, '4319965', 0, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(923, 'áo xanh thời thượng', 76789, '5558863', 1, 'màu xanh đôn chề', NULL, NULL, NULL, NULL),
+(924, 'đồng hồ nam đỏ loser', 549851, '2542150', 0, 'màu hồng cánh sen sành điệu', NULL, NULL, NULL, NULL),
+(925, 'giày hồng thời thượng', 559486, '5811005', 0, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(926, 'tất đỏ đôn chề', 333582, '4016288', 1, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(927, 'gối xanh cá tính', 294054, '3241476', 0, 'màu trắng sành điệu', NULL, NULL, NULL, NULL),
+(928, 'tất hồng cánh sen đôn chề', 564553, '8135343', 0, 'màu đỏ đôn chề', NULL, NULL, NULL, NULL),
+(929, 'mũ vàng cá tính', 249023, '5397093', 0, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(930, 'mũ đen thượng đẳng', 221588, '3898117', 0, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(931, 'khăn hồng cánh sen đôn chề', 690742, '5192350', 1, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(932, 'đồng hồ thời trang trắng thời thượng', 435769, '2408275', 0, 'màu đen thượng đẳng', NULL, NULL, NULL, NULL),
+(933, 'chăn hồng cánh sen cực ngầu', 21045, '6659315', 0, 'màu xanh cực ngầu', NULL, NULL, NULL, NULL),
+(934, 'tất cam thượng đẳng', 171650, '2234825', 0, 'màu trắng loser', NULL, NULL, NULL, NULL),
+(935, 'khăn vàng sành điệu', 550842, '1193168', 1, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(936, 'khăn tím cực ngầu', 648498, '8314233', 1, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(937, 'giày tím đôn chề', 648010, '6415476', 1, 'màu đen thời thượng', NULL, NULL, NULL, NULL),
+(938, 'quần cam cá tính', 459686, '6057363', 1, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(939, 'khăn hồng cánh sen thời thượng', 653773, '6942429', 1, 'màu cam cá tính', NULL, NULL, NULL, NULL),
+(940, 'khăn hồng thượng đẳng', 46325, '4082485', 1, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(941, 'đồng hồ thời trang vàng thời thượng', 403815, '1263669', 0, 'màu hồng cánh sen cực ngầu', NULL, NULL, NULL, NULL),
+(942, 'tất đỏ cực ngầu', 15502, '4992626', 0, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(943, 'đồng hồ nữ đen cá tính', 831486, '4617872', 0, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(944, 'áo đen sành điệu', 847013, '4927330', 1, 'màu tím loser', NULL, NULL, NULL, NULL),
+(945, 'gối hồng cánh sen đôn chề', 872303, '6781347', 0, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(946, 'áo vàng đôn chề', 487483, '9869638', 1, 'màu xanh thượng đẳng', NULL, NULL, NULL, NULL),
+(947, 'mũ đỏ cá tính', 519250, '9891978', 1, 'màu cam sành điệu', NULL, NULL, NULL, NULL),
+(948, 'mũ tím thượng đẳng', 641491, '5774402', 1, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(949, 'chăn đen sành điệu', 104405, '9468401', 1, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(950, 'khăn vàng thượng đẳng', 416852, '2736174', 0, 'màu vàng sành điệu', NULL, NULL, NULL, NULL),
+(951, 'gối vàng loser', 815351, '3904937', 0, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(952, 'quần hồng cánh sen cực ngầu', 118927, '3635136', 1, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(953, 'đồng hồ nữ trắng sành điệu', 774213, '2069100', 1, 'màu cam thời thượng', NULL, NULL, NULL, NULL),
+(954, 'áo đen đôn chề', 196417, '6078198', 1, 'màu hồng thượng đẳng', NULL, NULL, NULL, NULL),
+(955, 'khăn đỏ cực ngầu', 219227, '4710234', 1, 'màu hồng đôn chề', NULL, NULL, NULL, NULL),
+(956, 'quần xanh cá tính', 825662, '6410655', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(957, 'giày trắng cực ngầu', 898842, '9689292', 0, 'màu vàng loser', NULL, NULL, NULL, NULL),
+(958, 'gối đỏ sành điệu', 479322, '2148531', 0, 'màu tím loser', NULL, NULL, NULL, NULL),
+(959, 'quần đen loser', 759385, '9522269', 1, 'màu hồng cực ngầu', NULL, NULL, NULL, NULL),
+(960, 'đồng hồ thời trang cam đôn chề', 571677, '7208303', 1, 'màu tím cực ngầu', NULL, NULL, NULL, NULL),
+(961, 'chăn đen cá tính', 828469, '2337067', 0, 'màu hồng cá tính', NULL, NULL, NULL, NULL),
+(962, 'khăn trắng thời thượng', 811693, '7939044', 1, 'màu đen loser', NULL, NULL, NULL, NULL),
+(963, 'khăn hồng đôn chề', 362416, '1738899', 1, 'màu đen thời thượng', NULL, NULL, NULL, NULL),
+(964, 'gối trắng sành điệu', 668854, '7608033', 0, 'màu tím cá tính', NULL, NULL, NULL, NULL),
+(965, 'đồng hồ thời trang xanh sành điệu', 969488, '2164120', 0, 'màu trắng đôn chề', NULL, NULL, NULL, NULL),
+(966, 'khăn đen cực ngầu', 710418, '9742780', 0, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(967, 'áo đen thời thượng', 597206, '3262277', 0, 'màu tím đôn chề', NULL, NULL, NULL, NULL),
+(968, 'giày đen loser', 524282, '3329261', 1, 'màu tím thượng đẳng', NULL, NULL, NULL, NULL),
+(969, 'đồng hồ nữ trắng loser', 816203, '8291990', 0, 'màu trắng thượng đẳng', NULL, NULL, NULL, NULL),
+(970, 'đồng hồ thời trang đỏ đôn chề', 60940, '5726439', 1, 'màu trắng thời thượng', NULL, NULL, NULL, NULL),
+(971, 'áo tím sành điệu', 549738, '4031449', 0, 'màu hồng cánh sen đôn chề', NULL, NULL, NULL, NULL),
+(972, 'mũ vàng cực ngầu', 810530, '3454054', 1, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(973, 'đồng hồ thời trang đỏ thượng đẳng', 160211, '7268302', 1, 'màu đen đôn chề', NULL, NULL, NULL, NULL),
+(974, 'đồng hồ nữ hồng sành điệu', 314250, '6078875', 0, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(975, 'mũ tím cực ngầu', 193897, '2146481', 0, 'màu đen sành điệu', NULL, NULL, NULL, NULL),
+(976, 'đồng hồ nữ tím loser', 588563, '4482049', 0, 'màu đen loser', NULL, NULL, NULL, NULL),
+(977, 'đồng hồ nam trắng sành điệu', 73600, '1438948', 1, 'màu xanh thời thượng', NULL, NULL, NULL, NULL),
+(978, 'gối hồng cá tính', 440990, '8465307', 0, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(979, 'đồng hồ nam cam cực ngầu', 127600, '1375915', 0, 'màu hồng sành điệu', NULL, NULL, NULL, NULL),
+(980, 'khăn hồng thời thượng', 758899, '3553777', 1, 'màu đỏ sành điệu', NULL, NULL, NULL, NULL),
+(981, 'đồng hồ nam hồng cánh sen thượng đẳng', 264665, '3788714', 1, 'màu vàng thời thượng', NULL, NULL, NULL, NULL),
+(982, 'đồng hồ nam hồng cánh sen thượng đẳng', 787324, '5980929', 0, 'màu vàng sành điệu', NULL, NULL, NULL, NULL),
+(983, 'mũ cam thời thượng', 504201, '7803447', 1, 'màu hồng cánh sen cá tính', NULL, NULL, NULL, NULL),
+(984, 'mũ đen thời thượng', 121226, '7049550', 1, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(985, 'khăn hồng thượng đẳng', 680511, '7152506', 1, 'màu hồng cánh sen thời thượng', NULL, NULL, NULL, NULL),
+(986, 'đồng hồ nữ hồng cánh sen loser', 952246, '6358395', 1, 'màu đen cực ngầu', NULL, NULL, NULL, NULL),
+(987, 'đồng hồ thời trang hồng cánh sen thượng đẳng', 436114, '9842502', 1, 'màu xanh loser', NULL, NULL, NULL, NULL),
+(988, 'gối đỏ sành điệu', 335756, '8541753', 1, 'màu đen sành điệu', NULL, NULL, NULL, NULL),
+(989, 'áo hồng thượng đẳng', 243893, '8609633', 1, 'màu tím thời thượng', NULL, NULL, NULL, NULL),
+(990, 'chăn đỏ loser', 956389, '8585232', 1, 'màu tím loser', NULL, NULL, NULL, NULL),
+(991, 'chăn hồng cá tính', 156706, '1303002', 1, 'màu xanh cá tính', NULL, NULL, NULL, NULL),
+(992, 'quần tím sành điệu', 177179, '4908073', 0, 'màu đen loser', NULL, NULL, NULL, NULL),
+(993, 'quần cam thời thượng', 975078, '7672446', 0, 'màu đỏ loser', NULL, NULL, NULL, NULL),
+(994, 'chăn cam loser', 751489, '2859387', 1, 'màu hồng cánh sen thượng đẳng', NULL, NULL, NULL, NULL),
+(995, 'đồng hồ nữ đỏ sành điệu', 309698, '9274081', 1, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(996, 'mũ trắng đôn chề', 686440, '3083510', 0, 'màu trắng cực ngầu', NULL, NULL, NULL, NULL),
+(997, 'quần trắng sành điệu', 855129, '5450716', 1, 'màu đỏ thời thượng', NULL, NULL, NULL, NULL),
+(998, 'áo tím cực ngầu', 70636, '6375880', 1, 'màu hồng thời thượng', NULL, NULL, NULL, NULL),
+(999, 'áo hồng loser', 547377, '4766421', 0, 'màu vàng cá tính', NULL, NULL, NULL, NULL),
+(1000, 'khăn đen loser', 216664, '8664744', 0, 'màu đen đôn chề', NULL, NULL, NULL, '2022-06-30 14:09:19'),
+(1027, 'ao khoac ', 999999, 'bbbb', 1, 'mo ta moi', 1, '1.bbbb.2022-07-02T11:25:12.122417200', '2022-07-02 11:25:12', '2022-07-02 11:25:12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `province`
+--
+
+CREATE TABLE `province` (
+`id` int(11) NOT NULL,
+`name` varchar(50) DEFAULT NULL,
+`code` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `province`
+--
+
+INSERT INTO `province` (`id`, `name`, `code`) VALUES
+(1, 'Hà Nội', 'HN'),
+(2, 'HCM', 'HCM');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `warehouse`
+--
+
+CREATE TABLE `warehouse` (
+`id` int(11) NOT NULL,
+`name` varchar(50) DEFAULT NULL,
+`address` varchar(300) DEFAULT NULL,
+`status` int(11) DEFAULT NULL,
+`province_id` int(11) DEFAULT NULL,
+`district_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `warehouse`
+--
+
+INSERT INTO `warehouse` (`id`, `name`, `address`, `status`, `province_id`, `district_id`) VALUES
+(2, 'Kho 1', 'Mễ trì, Nam Từ Liêm, HN', 1, 1, 1),
+(3, 'kho 2', '8 Phạm Hùng, Nam Từ Liêm, HN', 1, 1, 1),
+(5, 'kho 22222', 'kim ma, dong da, Nam Từ Liêm, Hà Nội', 1, 1, 1),
+(6, 'kho1', 'HN, Nam Từ Liêm, Hà Nội', 0, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `warehouse_product`
+--
+
+CREATE TABLE `warehouse_product` (
+`id` int(11) NOT NULL,
+`product_id` int(11) DEFAULT NULL,
+`warehouse_id` int(11) DEFAULT NULL,
+`inventory` int(11) DEFAULT NULL,
+`total_import` int(11) DEFAULT NULL,
+`total_export` int(11) DEFAULT NULL,
+`start_date` datetime DEFAULT NULL,
+`expried_date` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `district`
+--
+ALTER TABLE `district`
+ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+ADD PRIMARY KEY (`id`),
+ADD KEY `category_id` (`category_id`);
+
+--
+-- Indexes for table `province`
+--
+ALTER TABLE `province`
+ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `warehouse`
+--
+ALTER TABLE `warehouse`
+ADD PRIMARY KEY (`id`),
+ADD KEY `province_id` (`province_id`),
+ADD KEY `district_id` (`district_id`);
+
+--
+-- Indexes for table `warehouse_product`
+--
+ALTER TABLE `warehouse_product`
+ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `district`
+--
+ALTER TABLE `district`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1028;
+
+--
+-- AUTO_INCREMENT for table `province`
+--
+ALTER TABLE `province`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `warehouse`
+--
+ALTER TABLE `warehouse`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `warehouse_product`
+--
+ALTER TABLE `warehouse_product`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `product`
+--
+ALTER TABLE `product`
+ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
+
+--
+-- Constraints for table `warehouse`
+--
+ALTER TABLE `warehouse`
+ADD CONSTRAINT `warehouse_ibfk_1` FOREIGN KEY (`province_id`) REFERENCES `province` (`id`),
+ADD CONSTRAINT `warehouse_ibfk_2` FOREIGN KEY (`district_id`) REFERENCES `district` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

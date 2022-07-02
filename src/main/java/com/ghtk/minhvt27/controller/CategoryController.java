@@ -43,7 +43,7 @@ public class CategoryController {
     public ResponseEntity delete(
         @PathVariable Integer id
     ) {
-        Optional<CategoryEntity> categoryEntity = categoryRepository.findById(id); ;
+        categoryRepository.deleteById(id);
         return ResponseEntity.ok("Xoa thanh cong");
     }
 
@@ -61,6 +61,7 @@ public class CategoryController {
         return ResponseEntity.ok(categoryRepository.save(categoryEntity));
     }
 
+    //search category
     @GetMapping("/search")
     public ResponseEntity search(
 //        @RequestParam(value = "status") Integer status,

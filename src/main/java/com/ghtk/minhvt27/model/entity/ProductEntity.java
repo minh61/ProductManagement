@@ -1,85 +1,42 @@
 package com.ghtk.minhvt27.model.entity;
 
 import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.validator.constraints.Length;
+
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 
 @Entity
 @Table(name = "product")
-public class ProductEntity {
+@Getter
+@Setter
+public class ProductEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
 
     private String name;
-
     private Float price;
-
     private String sku;
-
     private Integer status;
-
     private String description;
+    private Integer categoryId;
+    private String code;
 
-    private Integer category_id;
+    private LocalDateTime createdAt;
+    private LocalDateTime modifiedAt;
 
-    public Integer getCategory_id() {
-        return category_id;
+    @Override
+    public String toString() {
+        return this.id + " " + this.name + " " + this.price + this.sku + " " + this.status + this.description + " " + this.categoryId + " " + this.code + " " + this.createdAt;
     }
-
-    public void setCategory_id(Integer category_id) {
-        this.category_id = category_id;
-    }
-
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Float getPrice() {
-        return price;
-    }
-
-    public void setPrice(Float price) {
-        this.price = price;
-    }
-
-    public String getSku() {
-        return sku;
-    }
-
-    public void setSku(String sku) {
-        this.sku = sku;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
 }
